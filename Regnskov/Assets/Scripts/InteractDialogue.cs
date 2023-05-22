@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class InteractDialogue : MonoBehaviour
+{
+
+
+    public string text;
+
+    public int dialogueStart;
+
+    public int dialogueEnd;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = text;
+
+
+
+    }
+
+
+    public void NextDialogue()
+    {
+
+
+    }
+
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

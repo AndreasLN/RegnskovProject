@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using static Dialogue;
+using Random = UnityEngine.Random;
 
 public class Dialogue : MonoBehaviour
 {
@@ -15,6 +18,13 @@ public class Dialogue : MonoBehaviour
     public TMP_Text dialogueText;
     //Dialogues list
     public SpriteRenderer portrait;
+    [System.Serializable]
+    public class Buttons
+    {
+        public List<Button> buttons;
+    }
+
+    public Buttons buttons;
 
 
     [System.Serializable]
@@ -45,6 +55,28 @@ public class Dialogue : MonoBehaviour
 
 
     public FacesList facesList;
+
+    [System.Serializable]
+    public class Replies
+    {
+        public List<Button> replies;
+    }
+
+    [System.Serializable]
+    public class RepliesList
+    {
+        public List<Replies> rL;
+    }
+
+    [System.Serializable]
+    public class RepliesListList
+    {
+        public List<RepliesList> rLL;
+    }
+
+
+    public RepliesListList repliesListList;
+
 
 
     //Writing speed
@@ -105,8 +137,49 @@ public class Dialogue : MonoBehaviour
         dialogueText.text = string.Empty;
 
         portrait.sprite = facesList.fL[chosenDialogue].faces[index];
+        HideReplies();
+
+        CheckReplies(0);
+
         //Start writing
         StartCoroutine(Writing());
+    }
+
+    public void CheckReplies(int indexReplies)
+    {
+        if (repliesListList.rLL[chosenDialogue].rL[index].replies[indexReplies])
+        {
+            print("CheckReplies");
+
+            buttons.buttons[indexReplies].gameObject.SetActive(true);
+            buttons.buttons[indexReplies] = repliesListList.rLL[chosenDialogue].rL[index].replies[indexReplies];
+
+            CheckReplies(indexReplies + 1);
+
+        }
+        else
+        {
+        }
+    }
+
+    public void HideReplies()
+    {
+
+        for (int i = 0; i < buttons.buttons.Count; i++)
+        {
+            print(i);
+            if (buttons.buttons[i])
+            {
+                buttons.buttons[i].enabled = false;
+                print("hello");
+            }
+            else
+            {
+                print("uh oh");
+            }
+
+        }
+
     }
 
     //End Dialogue
