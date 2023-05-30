@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
     public int multiplierTracker;
     public int[] multiplierThresholds;
 
-    public float totalNotes;
+    public float startNotes;
+    public float notesNow;
     public float normalHits;
     public float goodHits;
     public float perfectHits;
@@ -44,12 +45,14 @@ public class GameManager : MonoBehaviour
 
         currentMultiplier = 1;
 
-        totalNotes = FindObjectsOfType<noteObject>().Length; // regner ud hvor mange pile, der er i spillet. Pilene har noteObject script tilknyttet, og så finder vi bare længden af objects med den type på sig
+        startNotes = FindObjectsOfType<noteObject>().Length; // regner ud hvor mange pile, der er i spillet. Pilene har noteObject script tilknyttet, og så finder vi bare længden af objects med den type på sig 
     }
 
     
     void Update()
     {
+
+        notesNow = FindObjectsOfType<noteObject>().Length; // denne variabel skal sige hvor mange pile, der er lige nu
 
         if (!startPlaying)
         {
@@ -59,7 +62,9 @@ public class GameManager : MonoBehaviour
                 theBS.hasStarted = true;
 
                 theMusic.Play();
+                
             }
+          
         }
         else
         {
@@ -74,9 +79,9 @@ public class GameManager : MonoBehaviour
                 missesText.text = "" + missedHits;
 
                 float totalHit = normalHits + goodHits + perfectHits;
-                float percentHit = (totalHit / totalNotes) * 100f;          // her udregner vi procenten af notes, der er ramt ud fra totalNotes
+                float percentHit = (totalHit / startNotes) * 100f;          // her udregner vi procenten af notes, der er ramt ud fra totalNotes
 
-                percentHitText.text = percentHit.ToString("F1") + "%";   // "F1" kan bruges for kun at vise en enkelt decimal
+                 // percentHitText.text = percentHit.ToString("F1") + "%";   // "F1" kan bruges for kun at vise en enkelt decimal
 
                 string rankValue = "F";
 
@@ -108,8 +113,16 @@ public class GameManager : MonoBehaviour
                 rankText.text = rankValue;
 
                 finalScoreText.text = currentScore.ToString();
+            
 
             }
+
+        }
+
+        if (notesNow <= 0)
+        {
+
+            theMusic.Stop();
 
         }
     }
