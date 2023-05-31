@@ -17,6 +17,8 @@ public class Dialogue : MonoBehaviour
     //Text component
     public TMP_Text dialogueText;
     //Dialogues list
+    public Canvas canvas;
+
     public SpriteRenderer portrait;
     [System.Serializable]
     public class Buttons
@@ -91,12 +93,14 @@ public class Dialogue : MonoBehaviour
     private bool waitForNext;
 
     private int chosenDialogue;
+    private int lastDialogue;
 
     private void Awake()
     {
         //Dialogue starts as closed
         ToggleIndicator(false);
         ToggleWindow(false);
+
     }
 
     private void ToggleWindow(bool show)
@@ -123,20 +127,27 @@ public class Dialogue : MonoBehaviour
         ToggleIndicator(false);
         //Finds a random dialogue
         chosenDialogue = Random.Range(0, dialoguesList.dL.Count);
+        print(chosenDialogue);
         //Start with first dialogue
-        GetDialogue(0);
+        GetDialogue(0, dialoguesList.dL[chosenDialogue].dialogues.Count);
     }
 
-    private void GetDialogue(int i)
+    public void GetDialogue(int i, int dialogueEnd)
     {
         //start index at zero
         index = i;
+
+        lastDialogue = dialogueEnd;
+
         //Reset the character index
         charIndex = 0;
         //clear the dialogue component text
         dialogueText.text = string.Empty;
 
         portrait.sprite = facesList.fL[chosenDialogue].faces[index];
+
+        canvas.gameObject.SetActive(false);
+
         HideReplies();
 
         CheckReplies(0);
@@ -149,10 +160,23 @@ public class Dialogue : MonoBehaviour
     {
         if (repliesListList.rLL[chosenDialogue].rL[index].replies[indexReplies])
         {
-            print("CheckReplies");
 
-            buttons.buttons[indexReplies].gameObject.SetActive(true);
+            canvas.gameObject.SetActive(true);
+
+            Button currentButton = buttons.buttons[indexReplies]; 
+            if(currentButton != null)
+            {
+                Destroy(currentButton.gameObject);
+            }
             buttons.buttons[indexReplies] = repliesListList.rLL[chosenDialogue].rL[index].replies[indexReplies];
+
+            print(buttons.buttons[indexReplies] = repliesListList.rLL[chosenDialogue].rL[index].replies[indexReplies]);
+
+
+            Vector3 newPosition = new Vector3(buttons.buttons[indexReplies].gameObject.transform.position.x, buttons.buttons[indexReplies].gameObject.transform.position.y + (indexReplies * 20), buttons.buttons[indexReplies].gameObject.transform.position.z);
+
+            buttons.buttons[indexReplies] = Instantiate(buttons.buttons[indexReplies], canvas.transform);
+
 
             CheckReplies(indexReplies + 1);
 
@@ -167,15 +191,16 @@ public class Dialogue : MonoBehaviour
 
         for (int i = 0; i < buttons.buttons.Count; i++)
         {
-            print(i);
-            if (buttons.buttons[i])
+            Button currentButton = buttons.buttons[i];
+
+            if (currentButton != null)
             {
-                buttons.buttons[i].enabled = false;
-                print("hello");
+                Destroy(currentButton.gameObject);
+
+                print("hide replies");
             }
             else
             {
-                print("uh oh");
             }
 
         }
@@ -226,17 +251,16 @@ public class Dialogue : MonoBehaviour
         if (!started)
             return;
 
-        if (waitForNext && Input.GetKeyDown(KeyCode.E))
+        if (waitForNext && Input.GetKeyDown(KeyCode.E) && !canvas.isActiveAndEnabled)
         {
             waitForNext = false;
             index++;
 
             //Check if we are in the scope fo dialogues List
-            if (index < dialoguesList.dL[0].dialogues.Count)
+            if (index < lastDialogue)
             {
-                print(dialoguesList.dL);
                 //If so fetch the next dialogue
-                GetDialogue(index);
+                GetDialogue(index, lastDialogue);
             }
             else
             {

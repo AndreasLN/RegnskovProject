@@ -14,6 +14,9 @@ public class DialogueTrigger : MonoBehaviour
     private void Awake()
     {
         closeDialogueTrigger = closeTrigger.GetComponent<CloseDialogueTrigger>();
+
+        dialogueScript = Resources.FindObjectsOfTypeAll<Dialogue>()[0];
+
     }
 
     //Detect trigger with player
@@ -43,6 +46,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (playerDetected && Input.GetKeyDown(KeyCode.E) && closeDialogueTrigger.mousePointed)
         {
+            print(dialogueScript);
             dialogueScript.StartDialogue();
         }
     }

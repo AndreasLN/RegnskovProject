@@ -15,12 +15,19 @@ public class InteractDialogue : MonoBehaviour
 
     public int dialogueEnd;
 
+
+    public GameObject dialogue;
+
+    Dialogue dialogueDialogue;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         gameObject.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
+        dialogue = GameObject.Find("Dialogue");
 
+        dialogueDialogue = dialogue.GetComponent<Dialogue>();
 
     }
 
@@ -28,6 +35,9 @@ public class InteractDialogue : MonoBehaviour
     public void NextDialogue()
     {
 
+        
+
+        dialogueDialogue.GetDialogue(dialogueStart, dialogueEnd);
 
     }
 

@@ -10,7 +10,6 @@ public class CloseDialogueTrigger : MonoBehaviour
     private void OnMouseEnter()
     {
         mousePointed= true;
-        print(mousePointed);
 
     }
 
