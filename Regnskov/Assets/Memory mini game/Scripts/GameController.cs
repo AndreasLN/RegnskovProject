@@ -8,13 +8,39 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private Sprite bgImage;
 
+    public Sprite[] Puzzles;
+
+    public List<Sprite> gamePuzzles = new List<Sprite>(); 
+
     public List<Button> btns = new List<Button>();
+
+    private bool firstGuess, secondGuess;
+
+    private int countGuesses;
+    private int countCorrectGuesses;
+    private int gameGuesses;
+    private int firstGuessIndex, secondGuessIndex;
+
+
+    private string firstGuessPuzzle, secondGuessPuzzle;
+
+
+
+
+    private void Awake()
+    {
+
+        Puzzles = Resources.LoadAll<Sprite>("Sprites/Candy");   // alle sprites i resources filen -> sprites -> candy skal loades
+ 
+    }
 
 
     void Start()
     {
 
         GetButtons();
+        AddListeners();
+        AddGamePuzzles();
 
     }
 
@@ -33,6 +59,53 @@ public class GameController : MonoBehaviour
 
         }
 
+
+    }
+
+
+    void AddGamePuzzles()  // denne funktion er logikken bag hvilke billeder, der bliver valgt, og at de bliver valgt i par
+    {
+
+        int looper = btns.Count;
+
+        int index = 0;
+
+
+        for(int i = 0; i < looper; i++)
+        {
+
+            if(index == looper / 2)
+            {
+                index = 0;
+            }
+
+            gamePuzzles.Add(Puzzles[index]);
+
+            index++;
+
+        }
+
+    }
+
+
+    void AddListeners()
+    {
+        foreach (Button btn in btns)
+        {
+
+            btn.onClick.AddListener(() => pickAPuzzle());
+
+        }
+
+
+    }
+
+
+    public void pickAPuzzle()
+    {
+
+        string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;  // dette bruges til at finde navnet på det gameobject jeg klikker på.
+        Debug.Log("hallo " + name);
 
     }
 }
