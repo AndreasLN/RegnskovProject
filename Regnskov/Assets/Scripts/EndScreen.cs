@@ -31,7 +31,7 @@ public class EndScreen : MonoBehaviour
 
             if (blockSizeHeight < maxBlockSize)
             {
-                blockSizeHeight += 10;
+                blockSizeHeight += 0.25f;
             }
             else
             {
