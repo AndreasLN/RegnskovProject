@@ -12,7 +12,10 @@ public class AimController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z));
-        Crosshair.transform.position = new Vector2(target.x,target.y);
+        if (Crosshair != null)
+        {
+            target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+            Crosshair.transform.position = new Vector2(target.x, target.y);
+        }
     }
 }

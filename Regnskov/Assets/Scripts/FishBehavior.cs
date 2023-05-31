@@ -4,35 +4,75 @@ using UnityEngine;
 
 public class FishBehavior : MonoBehaviour
 {
-    
+
+    public Animator animator;
+
     private float fishTime = 0;
     private SpriteRenderer spriteR;
- 
-    
+    private bool isShot = false;
+    private bool fading = false;
+    private int facing = 0;
+
     void Start()
     {
+        
+        
+
+        facing = Random.Range(0, 2);
+
         spriteR = GetComponent<SpriteRenderer>();
         spriteR.color = new Color(1, 1, 1, 0);
-        
+
+        if (facing == 1)
+        {
+            spriteR.flipX = true;
+        }
+
         StartCoroutine("FadeIn");
 
         fishTime = Random.Range(1, 3);
 
     }
 
+    private void Update()
+    {
+        animator.SetBool("isDead", isShot);
+    }
+
+    public void IsShot()
+    {
+        isShot = true;
+        
+        spriteR.flipY = true;
+
+        if (fading == false)
+        {
+            StartCoroutine("FadeOut");
+        }
+        
+
+    }
+
     private void FixedUpdate()
     {
-        if (fishTime > 0) 
+        if (isShot == false)
         {
-            fishTime -= Time.deltaTime;
-        }
-        else
-        {
-            fishTime = 10;
-            StartCoroutine("FadeOut");
+            if (fishTime > 0)
+            {
+                fishTime -= Time.deltaTime;
+            }
+            else
+            {
+                fishTime = 10;
+                
+                if (fading  == false)
+                {
+                    StartCoroutine("FadeOut");
+                }
+                
 
+            }
         }
-
 
     }
 
@@ -48,6 +88,9 @@ public class FishBehavior : MonoBehaviour
 
     IEnumerator FadeOut()
     {
+
+        fading = true;
+
         for (float f = 1; f >= 0; f -= 0.05f)
         {
             spriteR.color = new Color(1, 1, 1, f);

@@ -5,31 +5,38 @@ using UnityEngine;
 
 public class CrosshairBehavior : MonoBehaviour
 {
+    
     public KeyCode shoot;
-    public TMP_Text fishScore;
+    public static CrosshairBehavior instance;
+    public GameObject targetPrefab;
 
-
-    private bool fishAming = false;
+    public bool endGame = false;
     private bool bowReady = false;
     private float bowDraw = 0;
-    private float fishesCaught;
 
+    Vector3 tarPos;
+    GameObject currentTarget;
 
+    private void Start()
+    {
+        instance = this;
 
+        GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 1);
+
+    }
     private void FixedUpdate()
     {
         if (Input.GetKey(shoot))
         {
-           
+
             bowDraw += Time.fixedDeltaTime;
 
             if (bowDraw >= 1)
             {
                 if (bowReady == false)
                 {
-            
+                    GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 1);
                     bowReady = true;
-                    Debug.Log("you have my bow");
             
                 }
 
@@ -43,52 +50,37 @@ public class CrosshairBehavior : MonoBehaviour
     private void Update()
     {
         
-        fishScore.text = fishesCaught.ToString();
-        
+        if (endGame)
+        {
+            Destroy(gameObject);
+        }
+
         if (Input.GetKeyUp(shoot))
         {
             if (bowReady)
             {
-                if (fishAming)
+
+                if (currentTarget != null)
                 {
-
-                    fishesCaught += 1;
-                    Debug.Log("BANG");
-                    bowReady = false;
-
+                    Destroy(currentTarget);
                 }
-                else
-                {
 
-                    Debug.Log("Sploosh");
-                    bowReady = false;
+                tarPos = new Vector3(transform.position.x, transform.position.y);
 
-                }
+                currentTarget = Instantiate(targetPrefab, tarPos, Quaternion.identity);
+
+                bowReady = false;
 
 
             }
+
+            GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 1);
 
             bowDraw = 0;
 
         }
 
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Fish")
-        {
-           fishAming = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (fishAming)
-        {
-            fishAming = false;
-        }
     }
 
 }
