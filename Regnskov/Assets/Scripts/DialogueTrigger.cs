@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogueScript;
+    Dialogue dialogueScript;
     private bool playerDetected;
 
     public GameObject closeTrigger;
