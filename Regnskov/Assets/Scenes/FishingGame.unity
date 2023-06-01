@@ -324,7 +324,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &261243150
@@ -989,7 +989,7 @@ MonoBehaviour:
   timerInt: 0
   fishCaught: 0
   gameTimeLeft: 0
-  gameTimeStart: 60
+  gameTimeStart: 5
   spawnTime: 3
 --- !u!4 &765651063
 Transform:
@@ -2259,7 +2259,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1961600098
