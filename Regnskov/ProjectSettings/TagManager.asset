@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fish
-  - Arrow
-  - Target
+  - Activator
+  - PuzzleButton
   layers:
   - Default
   - TransparentFX
@@ -14,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Camera
+  - 
   - 
   - 
   - 
@@ -43,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Arrows
+    uniqueID: 2468152247
     locked: 0

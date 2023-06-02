@@ -989,7 +989,7 @@ MonoBehaviour:
   timerInt: 0
   fishCaught: 0
   gameTimeLeft: 0
-  gameTimeStart: 60
+  gameTimeStart: 5
   spawnTime: 3
 --- !u!4 &765651063
 Transform:
@@ -1524,7 +1524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094245132}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 116.000015, z: -5683.5}
+  m_LocalPosition: {x: 0, y: 116.000015, z: 0}
   m_LocalScale: {x: 150.00002, y: 150.00002, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2203,8 +2203,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961600095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0965, y: 5.9614, z: -2.6405869}
-  m_LocalScale: {x: 6.313571, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 6, z: -2.6405869}
+  m_LocalScale: {x: 6.7644663, y: 0, z: 1.0293399}
+
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2251,7 +2252,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 7482667652216324306, guid: 71975980cb4395c4db81f1ad5e00edcf, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 01781fe2299ce2543b28af9fee02f4fd, type: 3}
+
   m_Color: {r: 0.7440251, g: 1, b: 0.72075474, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2259,7 +2261,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1961600098
