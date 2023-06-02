@@ -8,6 +8,7 @@ using static Dialogue;
 using Random = UnityEngine.Random;
 
 
+<<<<<<< Updated upstream
 [System.Serializable]
 public class DialogueReply
 {
@@ -43,6 +44,78 @@ public class DialogueCollection : MonoBehaviour
 }
 
 
+=======
+/*
+
+public class DialogueInstance : MonoBehaviour
+{
+    public String dialogueName;
+
+    public List<Dialogue> dialogues;
+
+    [System.Serializable]
+    public class Dialogues
+    {
+        
+        public List<string> dialogues;
+    }
+
+    [System.Serializable]
+    public class Dialogue
+    {
+        public GameInstance gi;
+        public string dialogueContent;
+        public Sprite face;
+    }
+
+
+    [System.Serializable]
+    public class DialoguesList
+    {
+        public List<Dialogues> dL;
+    }
+
+    public DialoguesList dialoguesList;
+
+    [System.Serializable]
+    public class Faces
+    {
+        public List<Sprite> faces;
+    }
+
+    [System.Serializable]
+    public class FacesList
+    {
+        public List<Faces> fL;
+    }
+
+
+    public FacesList facesList;
+
+    [System.Serializable]
+    public class Replies
+    {
+        public List<Button> replies;
+    }
+
+    [System.Serializable]
+    public class RepliesList
+    {
+        public List<Replies> rL;
+    }
+
+    [System.Serializable]
+    public class RepliesListList
+    {
+        public List<RepliesList> rLL;
+    }
+
+
+    public RepliesListList repliesListList;
+
+}
+*/
+>>>>>>> Stashed changes
 public class Dialogue : MonoBehaviour
 {
     //Fields
@@ -64,10 +137,18 @@ public class Dialogue : MonoBehaviour
 
     public Buttons buttons;
 
+    //public DialogueInstance testStartDialogue;
+
+    //public DialogueInstance currentDialogue;
+
+    //public List<DialogueInstance> dialogueInstances;
+
+
 
     [System.Serializable]
     public class Dialogues
     {
+
         public List<string> dialogues;
     }
     
@@ -137,6 +218,8 @@ public class Dialogue : MonoBehaviour
         ToggleIndicator(false);
         ToggleWindow(false);
 
+        //SetCurrentDialogue(testStartDialogue);
+
     }
 
     private void ToggleWindow(bool show)
@@ -147,6 +230,15 @@ public class Dialogue : MonoBehaviour
     {
         indicator.SetActive(show);
     }
+
+    /*
+    public void SetCurrentDialogue(DialogueInstance dialogue)
+    {
+        currentDialogue = dialogue;
+
+
+    }
+    */
 
     //Start Dialogue
     public void StartDialogue()
