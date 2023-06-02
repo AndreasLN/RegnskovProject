@@ -7,6 +7,42 @@ using UnityEngine.UI;
 using static Dialogue;
 using Random = UnityEngine.Random;
 
+
+[System.Serializable]
+public class DialogueReply
+{
+
+    public List<Button> buttons;
+
+}
+[System.Serializable]
+public class DialogueChunk
+{
+    public string content;
+
+    public Sprite face;
+
+
+}
+[System.Serializable]
+public class DialogueChapter
+{
+
+    public List<DialogueChunk> chunks;
+
+   
+    
+
+}
+
+[System.Serializable]
+public class DialogueCollection : MonoBehaviour
+{
+    public List<DialogueChapter> chapters;
+
+}
+
+
 public class Dialogue : MonoBehaviour
 {
     //Fields
