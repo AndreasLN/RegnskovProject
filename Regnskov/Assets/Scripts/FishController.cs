@@ -1,3 +1,4 @@
+using GameBaseSystem;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,22 +7,27 @@ using UnityEngine;
 public class FishController : MonoBehaviour
 {
     public static FishController instance;
-    
+
+
+    [Header("SceneLoading")]
+    public SceneActionComponent sceneLoader;
+    public Vector3 characterPosition;
+
+    [Header("Canvas Objects")]
     public GameObject fishPrefab;
     public GameObject endMenu;
     public GameObject endCanvas;
-
     public GameObject fishTimerText;
     public GameObject fishScoreText;
     public GameObject fishScoreNum;
     public GameObject fishTimerNum;
-
-    public BoxCollider2D SpawnArea;
-    
     public TMP_Text fishScore;
     public TMP_Text timer;
     public TMP_Text endFishScore;
 
+    public BoxCollider2D SpawnArea;
+
+    [Header("In Game Variables")]
     public int timerInt;
     public int fishCaught = 0;
 
@@ -43,8 +49,7 @@ public class FishController : MonoBehaviour
         fishTime = 0;
         gameTimeLeft = gameTimeStart;
 
-        endMenu.SetActive(false);
-        endCanvas.SetActive(false);
+        
     }
 
     private void Update()
@@ -70,6 +75,7 @@ public class FishController : MonoBehaviour
         }
         else
         {
+            
             endMenu.SetActive(true);
 
             fishTimerText.SetActive(false);
@@ -112,6 +118,13 @@ public class FishController : MonoBehaviour
 
         fishTime = 0;
         spawnTime = Random.Range(1, 5);
+    }
+
+    public void EndMiniGame()
+    {
+        Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
+
+        sceneLoader.Activate(characterPosition);
     }
 
 }

@@ -17,5 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lake.unity
     guid: 020a8ac4ee3d6b44b8f070137ff4d030
-
+  - enabled: 1
+    path: Assets/Scenes/FishingGame.unity
+    guid: cd4033c3d205a714491241db1b6ff336
   m_configObjects: {}
