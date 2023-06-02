@@ -36,7 +36,7 @@ namespace GameBaseSystem
 
         void Start()
         {
-            GameManager gameManager = Resources.FindObjectsOfTypeAll<GameManager>()[0];
+            CustomGameManager gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
 
             Image fade = gameManager.fade;
 
@@ -97,7 +97,7 @@ namespace GameBaseSystem
 
                 if (fadeOut)
                 {
-                    GameManager gameManager = Resources.FindObjectsOfTypeAll<GameManager>()[0];
+                    CustomGameManager gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
 
                     Image fade = gameManager.fade;
 
