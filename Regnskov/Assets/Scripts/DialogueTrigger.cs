@@ -11,6 +11,8 @@ public class DialogueTrigger : MonoBehaviour
 
     CloseDialogueTrigger closeDialogueTrigger;
 
+    public DialogueCollection dialogueCollection;
+    PlayerMovement pm;
     private void Awake()
     {
         closeDialogueTrigger = closeTrigger.GetComponent<CloseDialogueTrigger>();
@@ -26,6 +28,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             playerDetected = true;
+            pm = collision.gameObject.GetComponent<PlayerMovement>();
             dialogueScript.ToggleIndicator(playerDetected);
         }
     }
@@ -37,6 +40,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             playerDetected = false;
+            pm = null;
             dialogueScript.ToggleIndicator(playerDetected);
             dialogueScript.EndDialogue();
         }
@@ -48,6 +52,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             print(dialogueScript);
             dialogueScript.StartDialogue();
+            //DialogueController.instance.SetCollection(dialogueCollection, pm.knowledge, pm.posession);
         }
     }
 }

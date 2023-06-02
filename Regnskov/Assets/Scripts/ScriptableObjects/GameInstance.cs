@@ -9,5 +9,5 @@ public class GameInstance : ScriptableObject
     public GameObject gameContent;
 
     public List<GameInstance> preRequisites;
-
+    public bool unique = false;
 }

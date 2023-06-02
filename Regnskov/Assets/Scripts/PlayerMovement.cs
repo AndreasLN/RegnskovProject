@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
 
     public float speedMax = 5f;
-
+    public List<GameInstance> knowledge;
+    public List<GameInstance> posession;
     // Start is called before the first frame update
     void Start()
     {
