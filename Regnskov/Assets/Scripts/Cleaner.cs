@@ -8,7 +8,7 @@ public class Cleaner : MonoBehaviour
 
     PlayerMovement player;
 
-    GameManager gameManager;
+    CustomGameManager gameManager;
 
     public bool shouldPause;
 
@@ -18,7 +18,7 @@ public class Cleaner : MonoBehaviour
     {
         player = FindAnyObjectByType<PlayerMovement>();
 
-        gameManager = FindAnyObjectByType<GameManager>();
+        gameManager = FindAnyObjectByType<CustomGameManager>();
 
         player.gameObject.SetActive(false);
 

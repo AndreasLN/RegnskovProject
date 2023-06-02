@@ -7,7 +7,7 @@ public class Reloader : MonoBehaviour
 {
     PlayerMovement player;
 
-    GameManager gameManager;
+    CustomGameManager gameManager;
 
     public bool shouldPause;
 
@@ -22,7 +22,7 @@ public class Reloader : MonoBehaviour
         print(player);
         player.gameObject.SetActive(true);
 
-        gameManager = Resources.FindObjectsOfTypeAll<GameManager>()[0];
+        gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
 
         gameManager.hungerCanvas.gameObject.SetActive(true);
 

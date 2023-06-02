@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontal;
     float vertical;
 
-    public GameManager gameManager;
+    public CustomGameManager gameManager;
 
     public float speed = 5f;
 
@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
+
     }
 
     private void Awake()

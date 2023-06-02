@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class CustomGameManager : MonoBehaviour
 {
 
     public float maxHunger = 50;
@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public Slider hungerSlider;
 
     public Image fade;
-
     float timer = 1.0f;
 
     public bool paused;
