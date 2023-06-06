@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 988699896}
   - component: {fileID: 988699897}
   m_Layer: 0
-  m_Name: DialogueTrigger
+  m_Name: DialogueTrigger (Jose)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,21 +660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chapters:
-  - chunks:
-    - content: Hej
-      face: {fileID: 0}
-    - content: "Hvordden g\xE5r det"
-      face: {fileID: 0}
-    requiresKnowledge: {fileID: 0}
-    requiresPosession: {fileID: 0}
-    gives: {fileID: 0}
-    lastChunk:
-      content: 
-      face: {fileID: 0}
-    replies:
-      buttons:
-      - {fileID: 0}
-      - {fileID: 0}
+  - {fileID: 11400000, guid: 942c1fd5dd48d0348a2edce5e88930be, type: 2}
+  - {fileID: 11400000, guid: 2bf8613d8fe6a904ebc031ca980d2f36, type: 2}
   randomizeOrder: 0
 --- !u!1 &1009156936
 GameObject:

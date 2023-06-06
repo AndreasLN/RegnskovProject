@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,6 +42,8 @@ public class DialogueController : MonoBehaviour
     private List<GameInstance> posession;
     private DialogueChapter activeChapter;
     private DialogueChunk activeChunk;
+
+    private bool awaitReply = false;
     private void Awake()
     {
         //Dialogue starts as closed
@@ -61,21 +64,49 @@ public class DialogueController : MonoBehaviour
     }
     public void SetCollection(DialogueCollection collection, List<GameInstance> knowledge, List<GameInstance> posession)
     {
+        awaitReply = false;
+        activeChunk = null;
+        activeChapter = null;
         activeCollection = collection;
         this.knowledge = knowledge;
         this.posession = posession;
         NextChapter();
-        started = true;
+        
     }
 
-    public void NextChapter()
+    public void EndCollection ()
     {
-
-        activeChapter = activeCollection.NextChapter(knowledge, posession);
-
+        started = false;
+        waitForNext = false;
+        awaitReply = false;
+        ToggleWindow(false);
+    }
+    public void NextChapter(DialogueChapter chapter = null)
+    {
+        for (int i = 0; i < buttons.buttons.Count; i++)
+        {
+            if (buttons.buttons[i] != null)
+                buttons.buttons[i].gameObject.SetActive(false);
+        }
+        awaitReply = false;
+        activeChunk = null;
+        if (chapter == null)
+        {
+            activeChapter = activeCollection.NextChapter(knowledge, posession);
+        }
+        else
+        {
+            activeChapter = chapter;
+        }
         if (activeChapter != null)
         {
+            started = true;
+            ToggleWindow(true);
             GetNextChunk();
+        }
+        else
+        {
+            EndCollection();
         }
 
     }
@@ -85,12 +116,24 @@ public class DialogueController : MonoBehaviour
 
     }
 
-    public void GetNextChunk()
+    public void GetNextChunk(bool notClose = true)
     {
-
-        activeChunk = activeChapter.GetNext();
+        print("hello");
+        activeChunk = activeChapter.GetNext(activeChunk);
         if (activeChunk != null)
-        portrait.sprite = activeChunk.face;
+        {
+
+            portrait.sprite = activeChunk.face;
+            dialogueText.text = "";
+            charIndex = 0;
+            StartCoroutine(Writing());
+        }
+        else if (!notClose)
+        {
+            EndCollection();
+        }
+        print(notClose);
+        
     }
 
     IEnumerator Writing()
@@ -98,7 +141,7 @@ public class DialogueController : MonoBehaviour
         yield return new WaitForSecondsRealtime(writingSpeed);
 
         string currentDialogue = activeChunk.content;
-
+        //Debug.Log("Active: " + currentDialogue + ", Length: " + currentDialogue.Length);
         //Write the character
         dialogueText.text += currentDialogue[charIndex];
         //increase the character index 
@@ -106,6 +149,7 @@ public class DialogueController : MonoBehaviour
         //Make sure you have reached the end of the sentence
         if (charIndex < currentDialogue.Length)
         {
+            //Debug.Log("Write index: " + charIndex + ", content now: " + dialogueText.text);
             //Wait x seconds 
             yield return new WaitForSecondsRealtime(writingSpeed);
             //Restart the same process
@@ -123,39 +167,103 @@ public class DialogueController : MonoBehaviour
         if (!started)
             return;
 
-        if (waitForNext && Input.GetKeyDown(KeyCode.E) && !canvas.isActiveAndEnabled)
+        if ((waitForNext && Input.GetKeyDown(KeyCode.E) && !awaitReply) || (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count -1] == activeChunk))// && !canvas.isActiveAndEnabled)
         {
+            Debug.Log("A: " + (waitForNext && Input.GetKeyDown(KeyCode.E) && !awaitReply));
+            Debug.Log("B: " + (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count - 1] == activeChunk));
+            bool notClose = (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count - 1] == activeChunk);
             waitForNext = false;
 
-            GetNextChunk();
+            GetNextChunk(notClose);
 
             if (activeChunk != null)
             {
-                StartCoroutine(Writing());
+                //Debug.Log("Not Null");
+                //charIndex = 0;
+                //StartCoroutine(Writing());
             }
             else
             {
-                DialogueReply replies = activeChapter.GetReplies();
+                //DialogueReply replies = activeChapter.GetReplies();
+                List<DialogueReply> replies = activeChapter.replies;
+                awaitReply = true;
                 if (replies != null)
                 {
-                    for (int i = 0; i < buttons.buttons.Count; i++)
+                    int maxI = 0;
+                    for (int i = 0; i < replies.Count; i++)
+                    {
+                        if (i < buttons.buttons.Count && buttons.buttons[i] != null)
+                        {
+                            buttons.buttons[i].gameObject.SetActive(true);
+                            buttons.buttons[i].GetComponentInChildren<TMP_Text>().text = replies[i].replyTitle;
+                            //Destroy(buttons.buttons[i].gameObject);
+                        }
+                        maxI = i;
+                    }
+
+                    for (int i = maxI+1; i < buttons.buttons.Count; i++)
                     {
                         if (buttons.buttons[i] != null)
+                            buttons.buttons[i].gameObject.SetActive(false);
+                    }
+                }
+
+                if (activeChapter.gives != null)
+                {
+                    if (activeChapter.gives.knowledgeObject)
+                    {
+                        if (!knowledge.Contains(activeChapter.gives))
                         {
-                            Destroy(buttons.buttons[i].gameObject);
+                            knowledge.Add(activeChapter.gives);
                         }
                     }
-                    for (int i = 0; i < replies.buttons.Count; i++)
+                    if (activeChapter.gives.posessionObject)
                     {
-                        if (i < buttons.buttons.Count)
+                        if (!posession.Contains(activeChapter.gives) || !activeChapter.gives.unique)
                         {
-                            buttons.buttons[i] = Instantiate(replies.buttons[i]);
-
+                            posession.Add(activeChapter.gives);
                         }
                     }
                 }
+
             }
         }
     }
 
+    public void ReplyA()
+    {
+        DialogueReply reply = activeChapter.replies[0];
+
+        
+
+        if (reply.endDialogue)
+        {
+            EndCollection();
+            return;
+        }
+        NextChapter(reply.replyTarget);
+    }
+
+    public void ReplyB()
+    {
+        DialogueReply reply = activeChapter.replies[1];
+        
+        if (reply.endDialogue)
+        {
+            EndCollection();
+            return;
+        }
+        NextChapter(reply.replyTarget);
+    }
+
+    public void ReplyC()
+    {
+        DialogueReply reply = activeChapter.replies[2];
+        if (reply.endDialogue)
+        {
+            EndCollection();
+            return;
+        }
+        NextChapter(reply.replyTarget);
+    }
 }

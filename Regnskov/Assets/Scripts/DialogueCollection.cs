@@ -6,8 +6,10 @@ using UnityEngine.UI;
 [System.Serializable]
 public class DialogueReply
 {
-
-    public List<Button> buttons;
+    public string replyTitle;
+    public DialogueChapter replyTarget;
+    public bool endDialogue = false;
+    
 
 }
 [System.Serializable]
@@ -19,69 +21,12 @@ public class DialogueChunk
 
 
 }
-[System.Serializable]
-public class DialogueChapter
-{
-
-    public List<DialogueChunk> chunks;
-
-    public GameInstance requiresKnowledge;
-
-    public GameInstance requiresPosession;
-
-    public GameInstance gives;
-
-    public DialogueChunk lastChunk;
-
-    public DialogueReply replies;
-
-    public DialogueReply GetReplies()
-    {
-
-
-        return replies;
-    }
-    public DialogueChunk GetNext()
-    {
-
-
-
-        if (lastChunk != null)
-        {
-            int index = chunks.IndexOf(lastChunk);
-
-            DialogueChunk nextChunk = null;
-
-            if (index < chunks.Count - 1)
-            {
-                nextChunk = chunks[index + 1];
-            }
-            else
-            {
-                return null;
-            }
-            lastChunk = nextChunk;
-
-            return lastChunk;
-        }
-        else if (chunks.Count > 0)
-        {
-            lastChunk = chunks[0];
-
-            return lastChunk;
-        }
-
-        return null;
-
-    }
-
-
-}
 
 
 
 public class DialogueCollection : MonoBehaviour
 {
+    public bool isActive = false;
     public List<DialogueChapter> chapters;
 
     public bool randomizeOrder;
@@ -89,7 +34,7 @@ public class DialogueCollection : MonoBehaviour
     public DialogueChapter NextChapter(List<GameInstance> knowledge, List<GameInstance> posession)
     {
         // c = current chapter in Iteration
-        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique));
+        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)));
 
         if (result.Count > 0)
         {

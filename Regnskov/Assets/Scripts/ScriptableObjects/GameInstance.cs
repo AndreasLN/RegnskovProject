@@ -7,7 +7,8 @@ public class GameInstance : ScriptableObject
     public string instanceName;
 
     public GameObject gameContent;
-
+    public bool knowledgeObject = true;
+    public bool posessionObject = true;
     public List<GameInstance> preRequisites;
     public bool unique = false;
 }

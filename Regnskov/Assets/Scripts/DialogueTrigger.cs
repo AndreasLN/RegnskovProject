@@ -42,17 +42,21 @@ public class DialogueTrigger : MonoBehaviour
             playerDetected = false;
             pm = null;
             dialogueScript.ToggleIndicator(playerDetected);
-            dialogueScript.EndDialogue();
+            dialogueCollection.isActive = false;
+            //dialogueScript.EndDialogue();
+            DialogueController.instance.EndCollection();
         }
     }
     //While detected if we interact start the dialogue
     private void Update()
     {
-        if (playerDetected && Input.GetKeyDown(KeyCode.E) && closeDialogueTrigger.mousePointed)
+        if (playerDetected && Input.GetKeyDown(KeyCode.E) && closeDialogueTrigger.mousePointed && !dialogueCollection.isActive)
         {
-            print(dialogueScript);
-            dialogueScript.StartDialogue();
-            //DialogueController.instance.SetCollection(dialogueCollection, pm.knowledge, pm.posession);
+            Debug.Log("Dialogue Started");
+            //print(dialogueScript);
+            //dialogueScript.StartDialogue();
+            dialogueCollection.isActive = true;
+            DialogueController.instance.SetCollection(dialogueCollection, pm.knowledge, pm.posession);
         }
     }
 }
