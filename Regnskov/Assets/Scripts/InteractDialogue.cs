@@ -32,6 +32,12 @@ public class InteractDialogue : MonoBehaviour
     }
 
 
+    public void NextChapter (GameInstance gameInstance)
+    {
+
+
+    }
+
     public void NextDialogue()
     {
 
