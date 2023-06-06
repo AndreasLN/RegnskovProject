@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     public CustomGameManager gameManager;
 
+    public Animator animator;
+
     public float speed = 5f;
 
     public float speedMax = 5f;
@@ -35,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        animator.SetFloat("Horizontal", horizontal);
+        animator.SetFloat("Vertical", vertical);
 
         if (gameManager.hunger > gameManager.maxHunger * 0.75f)
         {
