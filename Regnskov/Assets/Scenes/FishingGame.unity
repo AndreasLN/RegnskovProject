@@ -2151,16 +2151,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.x
-      value: -11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName
-      value: Scenes/Lake
+      value: Scenes/lake
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 020a8ac4ee3d6b44b8f070137ff4d030, type: 3}
+      objectReference: {fileID: 102900000, guid: cddce0e119b662d47b8d02bafdb0bff4, type: 3}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_RootOrder
       value: 1
