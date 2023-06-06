@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Activator
   - PuzzleButton
+  - Undefined
+  - Fish
   layers:
   - Default
   - TransparentFX

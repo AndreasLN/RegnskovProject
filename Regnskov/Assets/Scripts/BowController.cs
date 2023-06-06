@@ -23,13 +23,12 @@ public class BowController : MonoBehaviour
     private bool bowIdle = true;
     private float bowDraw = 0;
 
+    public Camera mainCam;
 
-    private Camera mainCam;
     private Vector3 mousePos;
     private void Start()
     {
         instance = this;
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         bowIdle = true;
     }
 
