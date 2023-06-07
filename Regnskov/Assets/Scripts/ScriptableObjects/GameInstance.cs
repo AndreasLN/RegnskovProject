@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameInstance : ScriptableObject
 {
     public string instanceName;
+    public Sprite instanceSprite;
+
 
     public GameObject gameContent;
     public bool knowledgeObject = true;

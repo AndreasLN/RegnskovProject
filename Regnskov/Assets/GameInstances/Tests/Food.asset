@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec6b7795e69cd924f9c730e67200e643, type: 3}
-  m_Name: Fish
+  m_Script: {fileID: 11500000, guid: 605eccb89f5eb9c4c8793710e8a121d9, type: 3}
+  m_Name: Food
   m_EditorClassIdentifier: 
-  instanceName: Fish
+  instanceName: 
   gameContent: {fileID: 0}
-  preRequisites:
-  - {fileID: 11400000, guid: 21e31474787003847a78fb84a1a4bbfb, type: 2}
+  knowledgeObject: 1
+  posessionObject: 1
+  preRequisites: []
+  unique: 0
+  pounds: 0
