@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2314561380909542379}
   - component: {fileID: 695040623}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: Peacock
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 695040623}
+  fishInstance: {fileID: 11400000, guid: a788dc6475c9d9542b499398123d22fb, type: 2}
 --- !u!95 &695040623
 Animator:
   serializedVersion: 5

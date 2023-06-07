@@ -11,6 +11,8 @@ public class Reloader : MonoBehaviour
 
     public bool shouldPause;
 
+    public bool playerActivate;
+
     public Collider2D cameracollider;
 
     CinemachineConfiner2D confiner;
@@ -20,7 +22,7 @@ public class Reloader : MonoBehaviour
     {
         player = Resources.FindObjectsOfTypeAll<PlayerMovement>()[0];
         print(player);
-        player.gameObject.SetActive(true);
+        player.gameObject.SetActive(playerActivate);
 
         gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
 

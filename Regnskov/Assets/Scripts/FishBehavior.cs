@@ -6,7 +6,7 @@ public class FishBehavior : MonoBehaviour
 {
 
     public Animator animator;
-
+    public Fish fishInstance;
     private float fishTime = 0;
     private SpriteRenderer spriteR;
     private bool isShot = false;
@@ -15,8 +15,6 @@ public class FishBehavior : MonoBehaviour
 
     void Start()
     {
-        
-        
 
         facing = Random.Range(0, 2);
 
@@ -44,6 +42,8 @@ public class FishBehavior : MonoBehaviour
         isShot = true;
         
         spriteR.flipY = true;
+
+        Aquire();
 
         if (fading == false)
         {
@@ -102,5 +102,14 @@ public class FishBehavior : MonoBehaviour
 
     }
 
+    public void Aquire()
+    {
+        Food giAsFood = fishInstance as Food;
+
+        CustomGameManager.instance.fishPounds += Random.Range(giAsFood.minPounds, giAsFood.maxPounds + 1);
+
+        print(fishInstance);
+
+    }
 
 }

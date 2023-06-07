@@ -11,7 +11,6 @@ namespace GameBaseSystem
         public bool fadeOut = true;
         public Vector3 characterPosition;
 
-
         private Scene current;
         private Scene loaded;
         public Scene Current 
@@ -51,8 +50,7 @@ namespace GameBaseSystem
 
             characterPosition = characterPos;
 
-            print("hello");
-
+            
             StartCoroutine(ActivateSceneAction());
         }
 
@@ -108,9 +106,12 @@ namespace GameBaseSystem
                     yield return new WaitUntil(() => fade.color.a == 1);
                 }
 
+
                 PlayerMovement player = Resources.FindObjectsOfTypeAll<PlayerMovement>()[0];
 
                 Vector3 playerPos = player.gameObject.transform.position;
+
+                
 
                 player.gameObject.transform.position = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
 
