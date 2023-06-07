@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
 
     public List<Button> btns = new List<Button>();
 
-    private bool firstGuess, secondGuess;
+    private bool firstGuess, secondGuess;   // disse bools vil være false, da vi ikke specificere dem til at være true
 
     private int countGuesses;
     private int countCorrectGuesses;
@@ -41,6 +41,8 @@ public class GameController : MonoBehaviour
         GetButtons();
         AddListeners();
         AddGamePuzzles();
+        Shuffle(gamePuzzles);
+        gameGuesses = gamePuzzles.Count / 2;
 
     }
 
@@ -105,7 +107,107 @@ public class GameController : MonoBehaviour
     {
 
         string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;  // dette bruges til at finde navnet på det gameobject jeg klikker på.
-        Debug.Log("hallo " + name);
+
+
+        if (!firstGuess)  // if true, fordi "!" = not, så altså "not false", som jo så må være true
+        {
+
+            firstGuess = true;  // denne linje sikre os, at hvis det ikke er første gang vi gætter, så vil firstGuess stadig være true
+
+            firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);  // her converter vi vores string navn fra unity til at være en integer
+
+            firstGuessPuzzle = gamePuzzles[firstGuessIndex].name;
+
+            btns[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];
+
+        }
+        else if(!secondGuess)
+        {
+
+            secondGuess = true;  
+
+            secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+
+            secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
+
+            btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+
+            countGuesses++;
+
+            StartCoroutine(CheckIfThePuzzlesMatch());
+
+        }
+
+
+
+    }
+
+    IEnumerator CheckIfThePuzzlesMatch()
+    {
+
+        yield return new WaitForSeconds(1f);
+
+        if (firstGuessPuzzle == secondGuessPuzzle)
+        {
+
+            yield return new WaitForSeconds(.5f);
+
+            btns[firstGuessIndex].interactable = false;     // vi gør så at buttons ikke er interactable igen, hvis vi gætter rigtigt
+            btns[secondGuessIndex].interactable = false;
+
+            btns[firstGuessIndex].image.color = new Color(0, 0, 0, 0);     // vi får knapperne til at forsvinde, hvis vi gætter rigtigt
+            btns[secondGuessIndex].image.color = new Color(0, 0, 0, 0);
+
+            CheckIfTheGameIsFinished();
+
+        }
+
+        else
+        {
+
+            yield return new WaitForSeconds(.5f);
+
+
+            btns[firstGuessIndex].image.sprite = bgImage;     // hvis vi ikke gætter rigtigt, så skal den gemme sig igen
+            btns[secondGuessIndex].image.sprite = bgImage;
+
+        }
+
+        yield return new WaitForSeconds(.5f);
+
+
+        firstGuess = secondGuess = false;
+
+
+    }
+
+
+    void CheckIfTheGameIsFinished()   //   funktion der bruges til at checke om spillet er færdigt.
+    {
+
+        countCorrectGuesses++;
+
+        if(countCorrectGuesses == gameGuesses)
+        {
+            Debug.Log("you finished the game");
+
+            Debug.Log("it took you " + countGuesses + " guesses to finish the game");
+
+        }
+    }
+
+    void Shuffle(List<Sprite> list)  // denne funktion får billederne til at blive shufflet rundt
+    {
+
+        for(int i = 0; i < list.Count; i++)
+        {
+
+            Sprite temp = list[i];
+            int randomIndex = Random.Range(i, list.Count);
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+
+        }
 
     }
 }
