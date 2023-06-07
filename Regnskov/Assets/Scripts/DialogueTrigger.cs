@@ -11,6 +11,8 @@ public class DialogueTrigger : MonoBehaviour
 
     CloseDialogueTrigger closeDialogueTrigger;
 
+    public DialogueCollection dialogueCollection;
+    PlayerMovement pm;
     private void Awake()
     {
         closeDialogueTrigger = closeTrigger.GetComponent<CloseDialogueTrigger>();
@@ -26,6 +28,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             playerDetected = true;
+            pm = collision.gameObject.GetComponent<PlayerMovement>();
             dialogueScript.ToggleIndicator(playerDetected);
         }
     }
@@ -37,17 +40,23 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             playerDetected = false;
+            pm = null;
             dialogueScript.ToggleIndicator(playerDetected);
-            dialogueScript.EndDialogue();
+            dialogueCollection.isActive = false;
+            //dialogueScript.EndDialogue();
+            DialogueController.instance.EndCollection();
         }
     }
     //While detected if we interact start the dialogue
     private void Update()
     {
-        if (playerDetected && Input.GetKeyDown(KeyCode.E) && closeDialogueTrigger.mousePointed)
+        if (playerDetected && Input.GetKeyDown(KeyCode.E) && closeDialogueTrigger.mousePointed && !dialogueCollection.isActive)
         {
-            print(dialogueScript);
-            dialogueScript.StartDialogue();
+            Debug.Log("Dialogue Started");
+            //print(dialogueScript);
+            //dialogueScript.StartDialogue();
+            dialogueCollection.isActive = true;
+            DialogueController.instance.SetCollection(dialogueCollection, pm.knowledge, pm.posession);
         }
     }
 }

@@ -7,6 +7,9 @@ using UnityEngine.UI;
 using static Dialogue;
 using Random = UnityEngine.Random;
 
+
+
+
 public class Dialogue : MonoBehaviour
 {
     //Fields
@@ -28,10 +31,18 @@ public class Dialogue : MonoBehaviour
 
     public Buttons buttons;
 
+    //public DialogueInstance testStartDialogue;
+
+    //public DialogueInstance currentDialogue;
+
+    //public List<DialogueInstance> dialogueInstances;
+
+
 
     [System.Serializable]
     public class Dialogues
     {
+
         public List<string> dialogues;
     }
     
@@ -101,6 +112,8 @@ public class Dialogue : MonoBehaviour
         ToggleIndicator(false);
         ToggleWindow(false);
 
+        //SetCurrentDialogue(testStartDialogue);
+
     }
 
     private void ToggleWindow(bool show)
@@ -111,6 +124,15 @@ public class Dialogue : MonoBehaviour
     {
         indicator.SetActive(show);
     }
+
+    /*
+    public void SetCurrentDialogue(DialogueInstance dialogue)
+    {
+        currentDialogue = dialogue;
+
+
+    }
+    */
 
     //Start Dialogue
     public void StartDialogue()
