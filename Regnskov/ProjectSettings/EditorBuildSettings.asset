@@ -6,6 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Game.unity
+    guid: 434295e00f5f6224688642777aeca349
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1261300567b684647972d2cd60c10c40
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: d96c50e7efd07d74e9bdd940131874c7
+  - enabled: 1
+    path: Assets/Scenes/laketILED.unity
+    guid: cddce0e119b662d47b8d02bafdb0bff4
+  - enabled: 1
+    path: Assets/Scenes/FishingGame.unity
+    guid: cd4033c3d205a714491241db1b6ff336
+  - enabled: 1
+    path: Assets/Scenes/Rythm game.unity
+    guid: a7efac3f0da73e7439004acd29203987
+  - enabled: 1
+    path: Assets/Scenes/MotherTree.unity
+    guid: 4f4a509c88259d84a979052bb88c4988
+  - enabled: 1
+    path: Assets/Scenes/CookingMiniGame.unity
+    guid: e6aaa7001e2251446802b60a31b61640
+  - enabled: 1
+    path: Assets/Scenes/TownTiled.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

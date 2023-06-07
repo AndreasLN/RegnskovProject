@@ -1,3 +1,4 @@
+using GameBaseSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,13 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
+
+    [Header("SceneLoading")]
+    public SceneActionComponent sceneLoader;
+    public Vector3 characterPosition;
+
+
+    [Header("RythemGameVar")]
     public AudioSource theMusic;
 
     public bool startPlaying;
@@ -36,6 +44,7 @@ public class GameManager : MonoBehaviour
     public GameObject resultScreen;
     public Text percentHitText, normalsText, goodsText, perfectsText, missesText, rankText, finalScoreText;
 
+    private bool canEnd;
 
     void Start()
     {
@@ -51,7 +60,16 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
+        
+        if (canEnd) // når man kan slutte spillet skal man trykke på escape for at komme ud af det.
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
 
+                sceneLoader.Activate(characterPosition);
+            }
+        }
         notesNow = FindObjectsOfType<noteObject>().Length; // denne variabel skal sige hvor mange pile, der er lige nu
 
         if (!startPlaying)
@@ -72,6 +90,7 @@ public class GameManager : MonoBehaviour
             if(!theMusic.isPlaying && !resultScreen.activeInHierarchy)    // hvis musikken ikke spiller og resultscreen ikke er aktiv, så skal resultscreen være aktiv
             {
                 resultScreen.SetActive(true);
+                canEnd = true; //tilføjet den her bool for at lettere bare kunne komme ud af spillet efter en button af en eller anden grund ikke virkede
 
                 normalsText.text = "" + normalHits;
                 goodsText.text = "" + goodHits;
@@ -184,4 +203,6 @@ public class GameManager : MonoBehaviour
 
         missedHits++;
     }
+
+
 }

@@ -1,0 +1,90 @@
+{
+    "name": "ArcadeInputActions",
+    "maps": [
+        {
+            "name": "ArcadeInputs",
+            "id": "bb48f088-7d88-4bbc-b3f8-d09bd0a94a83",
+            "actions": [
+                {
+                    "name": "Player1JoystickRight",
+                    "type": "Button",
+                    "id": "5173b9c3-073f-4494-8aa5-806e04f16ccb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "JoystickLeft",
+                    "type": "Button",
+                    "id": "9d5b763c-83f4-4904-93c8-86f5cdb705fa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "JoystickUp",
+                    "type": "Button",
+                    "id": "c9b7b22e-3591-4eca-b8bf-e8bb1f9fc8fb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "JoystickDown",
+                    "type": "Button",
+                    "id": "a27ac1b0-0312-4471-8ee4-f183949b842d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "29309df5-16bb-4d11-a61a-56ce89831a39",
+                    "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player1JoystickRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93c54c91-b9d7-4c89-a7a1-10ff03c4fa67",
+                    "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoystickLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f15ce08-eadf-412b-a12f-e54acf4df31f",
+                    "path": "<Joystick>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoystickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76888afa-37f2-49dc-bd10-158adbb3b18e",
+                    "path": "<Joystick>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoystickDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
