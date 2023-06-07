@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour
         GetButtons();
         AddListeners();
         AddGamePuzzles();
+        Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count / 2;
 
     }
@@ -190,8 +191,23 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("you finished the game");
 
-            Debug.Log("it took you " + countGuesses + " many guesses to finish the game");
+            Debug.Log("it took you " + countGuesses + " guesses to finish the game");
 
         }
+    }
+
+    void Shuffle(List<Sprite> list)  // denne funktion får billederne til at blive shufflet rundt
+    {
+
+        for(int i = 0; i < list.Count; i++)
+        {
+
+            Sprite temp = list[i];
+            int randomIndex = Random.Range(i, list.Count);
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+
+        }
+
     }
 }
