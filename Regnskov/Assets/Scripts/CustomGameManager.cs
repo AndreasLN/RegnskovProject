@@ -5,10 +5,16 @@ using UnityEngine.UI;
 
 public class CustomGameManager : MonoBehaviour
 {
+    public static CustomGameManager instance;
+
+    public int karma = 0;
 
     public float maxHunger = 50;
 
     public float hunger = 50;
+
+    public float fishPounds;
+
 
     public Canvas hungerCanvas;
     public Slider hungerSlider;
@@ -17,6 +23,12 @@ public class CustomGameManager : MonoBehaviour
     float timer = 1.0f;
 
     public bool paused;
+    
+    private void Awake()
+    {
+        instance = this;
+        
+    }
 
     public void UpdateHunger()
     {
@@ -39,6 +51,9 @@ public class CustomGameManager : MonoBehaviour
                 timer = 1.0f;
 
                 hunger -= 1;
+
+                hunger = Mathf.Clamp(hunger, 0, maxHunger);
+
                 UpdateHunger();
             }
         }

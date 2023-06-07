@@ -14,7 +14,7 @@ public class FishController : MonoBehaviour
     public Vector3 characterPosition;
 
     [Header("Canvas Objects")]
-    public GameObject fishPrefab;
+    public List<GameObject> fishPrefabs;
     public GameObject endMenu;
     public GameObject endCanvas;
     public GameObject fishTimerText;
@@ -114,7 +114,9 @@ public class FishController : MonoBehaviour
 
         spawnPos = new Vector2(screenX, screenY);
 
-        Instantiate(fishPrefab, spawnPos, fishPrefab.transform.rotation);
+        int fishPrefab = Random.Range(0, fishPrefabs.Count);
+
+        Instantiate(fishPrefabs[fishPrefab], spawnPos, fishPrefabs[fishPrefab].transform.rotation);
 
         fishTime = 0;
         spawnTime = Random.Range(1, 5);

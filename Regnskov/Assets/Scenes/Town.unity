@@ -299,6 +299,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: activeCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName
       value: Scenes/MotherTree
       objectReference: {fileID: 0}
@@ -494,8 +498,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: activeCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName
-      value: Scenes/lake
+      value: Scenes/LakeTiled
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneAsset
@@ -754,8 +762,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 2255f19508668cf468e39dfa62f9c585, type: 3}
-
-  m_Color: {r: 1, g: 0.44025153, b: 0.44025153, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -820,6 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f51c2e573dac34e986ead8c41b169a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
   chapters:
   - {fileID: 11400000, guid: 942c1fd5dd48d0348a2edce5e88930be, type: 2}
   - {fileID: 11400000, guid: 2bf8613d8fe6a904ebc031ca980d2f36, type: 2}
@@ -1223,17 +1231,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 2255f19508668cf468e39dfa62f9c585, type: 3}
-  m_Color: {r: 1, g: 0.55345905, b: 0.55345905, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1249361076
@@ -2326,9 +2333,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-
-  m_Sprite: {fileID: 7482667652216324306, guid: 2255f19508668cf468e39dfa62f9c585, type: 3}
-  m_Color: {r: 0.5622862, g: 1, b: 0.26100624, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2555,6 +2561,10 @@ PrefabInstance:
       propertyPath: cameracollider
       value: 
       objectReference: {fileID: 1149836323}
+    - target: {fileID: 7680058816837450796, guid: bab6dd7f4f844e04a958cb34461040fb, type: 3}
+      propertyPath: playerActivate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7680058816837450797, guid: bab6dd7f4f844e04a958cb34461040fb, type: 3}
       propertyPath: m_Name
       value: Reloader

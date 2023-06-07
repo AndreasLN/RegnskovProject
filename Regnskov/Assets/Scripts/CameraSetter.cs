@@ -12,6 +12,8 @@ public class CameraSetter : MonoBehaviour
 
     Canvas canvas;
 
+    BowController bowController;
+
     void Awake()
     {
 
@@ -19,9 +21,23 @@ public class CameraSetter : MonoBehaviour
 
         camera = cameraGameObject.GetComponent<Camera>();
 
-        canvas = GetComponent<Canvas>();
+        if (GetComponent<Canvas>() != null )
+        {
+            canvas = GetComponent<Canvas>();
+            canvas.worldCamera = camera;
 
-        canvas.worldCamera = camera;
+
+        }
+
+
+        if (GetComponent<BowController>() != null ) { 
+            bowController = GetComponent<BowController>();
+            bowController.mainCam = camera;
+
+
+        }
+
+
 
     }
 
