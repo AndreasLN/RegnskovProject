@@ -10,9 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: Pre 1. hut svar
+  m_Name: Pre 2.2. hut Amarilis
   m_EditorClassIdentifier: 
-  chunks: []
+  chunks:
+  - content: Har du en uddannelse?
+    face: {fileID: 0}
+  - content: 'Ja? - I hvad? '
+    face: {fileID: 0}
+  - content: "Sp\xE6ndende."
+    face: {fileID: 0}
+  - content: "Vi har f\xE5et skoler herude nu, s\xE5 nu kan vi ogs\xE5 uddanne os."
+    face: {fileID: 0}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}

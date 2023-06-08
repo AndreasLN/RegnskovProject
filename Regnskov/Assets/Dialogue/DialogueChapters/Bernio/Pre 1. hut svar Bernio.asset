@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
+  m_Name: Pre 1. hut svar Bernio
+  m_EditorClassIdentifier: 
+  chunks:
+  - content: "Hej! Godt du vil hj\xE6lpe. Vi har behov for tr\xE6 for at kunne bygge.
+      Tal med Jos\xE9 og h\xF8r om han kan vise dig det."
+    face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
+  requiresKnowledge: {fileID: 0}
+  requiresPosession: {fileID: 0}
+  gives: {fileID: 0}
+  avoid: {fileID: 0}
+  priority: 0
+  replies: []
