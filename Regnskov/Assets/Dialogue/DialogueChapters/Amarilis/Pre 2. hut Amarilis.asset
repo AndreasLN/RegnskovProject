@@ -10,21 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: New areaminigame speech
+  m_Name: Pre 2. hut Amarilis
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Hej! Vi skal til at danse nu her, har du lyst til at pr\xF8ve at spille
-      p\xE5 trommer?"
+  - content: "Jeg er glad for mit folk og regnskoven. Nogle gange t\xE6nker jeg p\xE5
+      hvordan det m\xE5 v\xE6re i storbyen."
     face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 0}
   priority: 0
-  replies:
-  - replyTitle: Ja
-    replyTarget: {fileID: 11400000, guid: b34f47bd96ddb9448af57661ba2d137c, type: 2}
-    endDialogue: 0
-  - replyTitle: Nej
-    replyTarget: {fileID: 0}
-    endDialogue: 0
+  replies: []

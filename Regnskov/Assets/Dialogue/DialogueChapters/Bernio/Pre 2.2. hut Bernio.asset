@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: Minigame spillet 1 gang
+  m_Name: Pre 2.2. hut Bernio
   m_EditorClassIdentifier: 
-  chunks:
-  - content: "Hej! Kunne du godt lide dansen? Jeg kan godt lide vores danse - is\xE6r
-      vores kolibridans."
-    face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
+  chunks: []
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}

@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: Intro
+  m_Name: Pre 1.3. hut Amarilis
   m_EditorClassIdentifier: 
-  chunks: []
+  chunks:
+  - content: "Hej! Jeg har h\xF8rt du hj\xE6per med at bygge - det er venligt af
+      dig."
+    face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
