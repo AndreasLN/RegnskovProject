@@ -9,7 +9,9 @@ public class Door : MonoBehaviour
     public SceneActionComponent sceneLoader;
 
     public Vector3 characterPosition;
-  
+    public List<GameInstance> requiresKnowledge;
+    public List<GameInstance> requiresPosession;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,14 +42,41 @@ public class Door : MonoBehaviour
         
         if(collision.tag == "Player")
         {
+            PlayerMovement pm = collision.gameObject.GetComponent<PlayerMovement>();
 
-            GameObject player = collision.gameObject;
+            bool allowEntrance = true;
 
-            Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
+            for (int i = 0; i < requiresKnowledge.Count; i++)
+            {
+                if (!pm.knowledge.Contains(requiresKnowledge[i]))
+                {
+                    allowEntrance = false;
+                    break;
+                }
+            }
 
-            //collision.gameObject.transform.position = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
+            for (int i = 0; i < requiresPosession.Count && allowEntrance; i++)
+            {
+                if (!pm.posession.Contains(requiresPosession[i]))
+                {
+                    allowEntrance = false;
+                    break;
+                }
+            }
 
-            sceneLoader.Activate(characterPosition);
+            if (allowEntrance)
+            {
+                GameObject player = collision.gameObject;
+
+                Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
+
+                //collision.gameObject.transform.position = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
+
+
+                sceneLoader.Activate(characterPosition);
+            }
+
+            
 
 
 
