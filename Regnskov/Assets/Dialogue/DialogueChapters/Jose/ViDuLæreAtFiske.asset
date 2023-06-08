@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: Intro
+  m_Name: "ViDuL\xE6reAtFiske"
   m_EditorClassIdentifier: 
   chunks:
   - content: Hejsa, jeg hedder Jose
@@ -19,14 +19,12 @@ MonoBehaviour:
     face: {fileID: 0}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
-  gives: {fileID: 11400000, guid: a938e69cbec7f6041beaae2ced573d59, type: 2}
+  gives: {fileID: 0}
+  lastChunk:
+    content: 
+    face: {fileID: 0}
   replies:
   - replyTitle: "Det g\xE5r godt"
     replyTarget: {fileID: 11400000, guid: 136b939fd5f8b434bac871b7e1e784ca, type: 2}
-    endDialogue: 0
   - replyTitle: "Det g\xE5r helt forf\xE6rdeligt"
     replyTarget: {fileID: 11400000, guid: 383d72aeccfce4f43a7c5801bed53b44, type: 2}
-    endDialogue: 0
-  - replyTitle: Fuck off
-    replyTarget: {fileID: 0}
-    endDialogue: 1

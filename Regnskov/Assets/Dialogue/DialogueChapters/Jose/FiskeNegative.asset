@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: FiskeNegative
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Jamen, s\xE5 skrid"
-    face: {fileID: 0}
+  - content: Nej? Du kan altid komme med en anden gang.
+    face: {fileID: 21300000, guid: 671b3731a3972384cb59d72534ccf2ce, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
-  lastChunk:
-    content: 
-    face: {fileID: 0}
+  avoid: {fileID: 0}
   replies: []
