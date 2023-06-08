@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Town.unity
     guid: d96c50e7efd07d74e9bdd940131874c7
   - enabled: 1
-    path: Assets/Scenes/LakeTiled.unity
-    guid: cddce0e119b662d47b8d02bafdb0bff4
-  - enabled: 1
     path: Assets/Scenes/FishingGame.unity
     guid: cd4033c3d205a714491241db1b6ff336
   - enabled: 1
@@ -30,6 +27,24 @@ EditorBuildSettings:
     path: Assets/Scenes/CookingMiniGame.unity
     guid: e6aaa7001e2251446802b60a31b61640
   - enabled: 1
-    path: Assets/Scenes/TownTiled.unity
+    path: Assets/Scenes/TownWithTileMap.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/IntroScenes/Intro1.unity
+    guid: 62c22d4db8076f241bd6f74f8b130627
+  - enabled: 1
+    path: Assets/Scenes/IntroScenes/Intro2.unity
+    guid: cb14fdfcc3af8ee439d47898961213c2
+  - enabled: 1
+    path: Assets/Scenes/IntroScenes/Intro3.unity
+    guid: 57739d3d65e0ebb4b988ceac7fd6fbcf
+  - enabled: 1
+    path: Assets/Scenes/IntroScenes/Intro4.unity
+    guid: 6309a123ef16eac4a99a7ecb48a0dfd7
+  - enabled: 1
+    path: Assets/Scenes/Here you get the fish.unity
+    guid: 3fd4bc93a1498b3489a8cf0b320f85fb
+  - enabled: 1
+    path: Assets/Scenes/woodwork area.unity
+    guid: fe94b14e33c22ab46b31be8dd24dccc3
   m_configObjects: {}

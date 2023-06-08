@@ -12,11 +12,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
-  - 
+  - Camera
+  - Camera Border
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Arrows
     uniqueID: 2468152247
+    locked: 0
+  - name: Hunger
+    uniqueID: 2295425969
     locked: 0
