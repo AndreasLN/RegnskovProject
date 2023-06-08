@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
+    public CustomGameManager gameManager;
 
     [Header("SceneLoading")]
     public SceneActionComponent sceneLoader;
@@ -89,6 +90,9 @@ public class GameManager : MonoBehaviour
 
             if(!theMusic.isPlaying && !resultScreen.activeInHierarchy)    // hvis musikken ikke spiller og resultscreen ikke er aktiv, så skal resultscreen være aktiv
             {
+
+                CustomGameManager.instance.karma += currentScore;
+
                 resultScreen.SetActive(true);
                 canEnd = true; //tilføjet den her bool for at lettere bare kunne komme ud af spillet efter en button af en eller anden grund ikke virkede
 

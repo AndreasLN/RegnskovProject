@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Town.unity
     guid: d96c50e7efd07d74e9bdd940131874c7
   - enabled: 1
-    path: Assets/Scenes/laketILED.unity
+    path: Assets/Scenes/LakeTiled.unity
     guid: cddce0e119b662d47b8d02bafdb0bff4
   - enabled: 1
     path: Assets/Scenes/FishingGame.unity
