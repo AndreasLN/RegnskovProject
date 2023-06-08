@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: "DetG\xE5rGodtRespons"
+  m_Name: "ViDuL\xE6reAtFiske"
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Det er jeg glad for at h\xF8re"
+  - content: Hejsa, jeg hedder Jose
+    face: {fileID: 0}
+  - content: "Hvordan g\xE5r det?"
     face: {fileID: 0}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
@@ -21,4 +23,8 @@ MonoBehaviour:
   lastChunk:
     content: 
     face: {fileID: 0}
-  replies: []
+  replies:
+  - replyTitle: "Det g\xE5r godt"
+    replyTarget: {fileID: 11400000, guid: 136b939fd5f8b434bac871b7e1e784ca, type: 2}
+  - replyTitle: "Det g\xE5r helt forf\xE6rdeligt"
+    replyTarget: {fileID: 11400000, guid: 383d72aeccfce4f43a7c5801bed53b44, type: 2}

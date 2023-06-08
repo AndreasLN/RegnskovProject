@@ -13,18 +13,17 @@ MonoBehaviour:
   m_Name: "VilDuL\xE6reAtFiske"
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Jeg vil gerne l\xE6re dig at fiske"
-    face: {fileID: 0}
-  - content: Er det ok?
-    face: {fileID: 0}
+  - content: "Hej! Jeg er p\xE5 vej ud for at fiske, vil du med?"
+    face: {fileID: 21300000, guid: 671b3731a3972384cb59d72534ccf2ce, type: 3}
   requiresKnowledge: {fileID: 11400000, guid: a938e69cbec7f6041beaae2ced573d59, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 11400000, guid: 55b69edbc5f443d45864d2e26f99894f, type: 2}
+  priority: 1
   replies:
-  - replyTitle: Ja Tak!!!
+  - replyTitle: Ja
     replyTarget: {fileID: 11400000, guid: dc69465594a5f464a957df9d294c55a3, type: 2}
     endDialogue: 0
-  - replyTitle: Nopey
+  - replyTitle: Nej
     replyTarget: {fileID: 11400000, guid: dd4cdbb2aa8efa340b186b6464664cc1, type: 2}
     endDialogue: 0
