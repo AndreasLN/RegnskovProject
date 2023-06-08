@@ -15,7 +15,7 @@ MonoBehaviour:
   chunks:
   - content: "Kom tilbage hvis du bliver tr\xE6t og sulten, s\xE5 kan vi lave noget
       mad sammen senere."
-    face: {fileID: 21300000, guid: 8984b5ca0718c7a4ab5cd624f20d058d, type: 3}
+    face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
