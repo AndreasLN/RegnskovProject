@@ -162,12 +162,12 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (!started)
             return;
 
-        if ((waitForNext && Input.GetKeyDown(KeyCode.E) && !awaitReply) || (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count -1] == activeChunk))// && !canvas.isActiveAndEnabled)
+        if ((waitForNext && Input.GetMouseButtonDown(0) && !awaitReply) || (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count -1] == activeChunk))// && !canvas.isActiveAndEnabled)
         {
             Debug.Log("A: " + (waitForNext && Input.GetKeyDown(KeyCode.E) && !awaitReply));
             Debug.Log("B: " + (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count - 1] == activeChunk));

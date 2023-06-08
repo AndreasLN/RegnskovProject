@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
+  m_Name: "ToucanForst\xE5"
+  m_EditorClassIdentifier: 
+  chunks:
+  - content: "At s\xE6tte I verden, at give n\xE6ring."
+    face: {fileID: 0}
+  - content: "At f\xF8de uden at eje."
+    face: {fileID: 0}
+  - content: At handle uden at forlange.
+    face: {fileID: 0}
+  - content: At vejlede uden at bestemme.
+    face: {fileID: 0}
+  - content: Det er vejen.
+    face: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: fe5d38b9566ed3a429a12f3db0cac7e0, type: 2}
+  requiresPosession: {fileID: 0}
+  gives: {fileID: 0}
+  avoid: {fileID: 0}
+  priority: 1
+  replies: []

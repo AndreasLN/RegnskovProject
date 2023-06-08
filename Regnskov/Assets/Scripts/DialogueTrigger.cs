@@ -39,6 +39,7 @@ public class DialogueTrigger : MonoBehaviour
         //If we lost trigger  with the player disable playerdeteced and hide indicator
         if (collision.tag == "Player")
         {
+            print("hello");
             playerDetected = false;
             pm = null;
             dialogueScript.ToggleIndicator(playerDetected);
@@ -47,16 +48,22 @@ public class DialogueTrigger : MonoBehaviour
             DialogueController.instance.EndCollection();
         }
     }
+
+
+    
+
     //While detected if we interact start the dialogue
     private void Update()
     {
-        if (playerDetected && Input.GetKeyDown(KeyCode.E) && closeDialogueTrigger.mousePointed && !dialogueCollection.isActive)
+
+        if (playerDetected && Input.GetMouseButtonDown(1) && closeDialogueTrigger.mousePointed && !Dialogue.instance.window.gameObject.activeSelf)
         {
-            Debug.Log("Dialogue Started");
             //print(dialogueScript);
             //dialogueScript.StartDialogue();
             dialogueCollection.isActive = true;
             DialogueController.instance.SetCollection(dialogueCollection, pm.knowledge, pm.posession);
+
+
         }
     }
 }

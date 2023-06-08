@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
+  m_Name: LaveMad
+  m_EditorClassIdentifier: 
+  chunks:
+  - content: "Jeg vil lave noget mad, skal du v\xE6re med? S\xE5 kan du pr\xF8ve
+      noget ny madkultur ogs\xE5."
+    face: {fileID: 21300000, guid: 8984b5ca0718c7a4ab5cd624f20d058d, type: 3}
+  requiresKnowledge: {fileID: 11400000, guid: 91f791abd98fd38429e57fd87e64934b, type: 2}
+  requiresPosession: {fileID: 0}
+  gives: {fileID: 0}
+  avoid: {fileID: 11400000, guid: 1c4619a52db9dfe4f8593b93d07210bf, type: 2}
+  priority: 1
+  replies:
+  - replyTitle: Ja tak
+    replyTarget: {fileID: 11400000, guid: 53260ebca77e26a46ab37901430e79d0, type: 2}
+    endDialogue: 0
+  - replyTitle: Nej
+    replyTarget: {fileID: 11400000, guid: 820e28a2e59039443ba7a2be3abc9ea5, type: 2}
+    endDialogue: 0
