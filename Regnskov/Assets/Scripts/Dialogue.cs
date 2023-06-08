@@ -8,10 +8,7 @@ using static Dialogue;
 using Random = UnityEngine.Random;
 
 
-<<<<<<< Updated upstream
 
-
-=======
 /*
 
 public class DialogueInstance : MonoBehaviour
@@ -82,7 +79,6 @@ public class DialogueInstance : MonoBehaviour
 
 }
 */
->>>>>>> Stashed changes
 public class Dialogue : MonoBehaviour
 {
     public static Dialogue instance;

@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameInstance : ScriptableObject
 {
     public string instanceName;
-<<<<<<< Updated upstream
     public Sprite instanceSprite;
 
 
@@ -14,11 +13,5 @@ public class GameInstance : ScriptableObject
     public bool posessionObject = true;
     public List<GameInstance> preRequisites;
     public bool unique = false;
-=======
 
-    public GameObject gameContent;
-
-    public List<GameInstance> preRequisites;
-
->>>>>>> Stashed changes
 }
