@@ -319,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -25, y: 65}
+  m_AnchoredPosition: {x: -25, y: 390}
   m_SizeDelta: {x: 25, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190029961
@@ -437,8 +437,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingLayerID: -1999541327
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &378858021
 RectTransform:
@@ -869,6 +869,10 @@ PrefabInstance:
       propertyPath: writingSpeed
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 7258699469952993950, guid: d921caed2e8233448a692f238e297da7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30.399963
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d921caed2e8233448a692f238e297da7, type: 3}
 --- !u!4 &806445607 stripped
@@ -911,7 +915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -25, y: 65}
+  m_AnchoredPosition: {x: -25, y: 390}
   m_SizeDelta: {x: 30, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &984057392
@@ -1115,7 +1119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -184, y: 104}
+  m_AnchoredPosition: {x: -184, y: 390}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1247099006
@@ -1377,6 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c4551109598af4fb3335e9bafdfd2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  karma: 0
   maxHunger: 50
   hunger: 50
   fishPounds: 0
