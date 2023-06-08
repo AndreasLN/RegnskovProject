@@ -1605,6 +1605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 2061567168}
   characterPosition: {x: 0, y: 0, z: 0}
+  requiresKnowledge: []
+  requiresPosession: []
 --- !u!212 &1411030859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1838,6 +1840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 246450358}
   characterPosition: {x: -8, y: -4, z: -0.013816746}
+  requiresKnowledge: []
+  requiresPosession: []
 --- !u!61 &1625589675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2206,6 +2210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1344755656}
   characterPosition: {x: 0, y: 0, z: 0}
+  requiresKnowledge: []
+  requiresPosession: []
 --- !u!61 &1989247397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2430,6 +2436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1811146253}
   characterPosition: {x: 0, y: 0, z: -0.013816746}
+  requiresKnowledge:
+  - {fileID: 11400000, guid: 55b69edbc5f443d45864d2e26f99894f, type: 2}
+  requiresPosession: []
 --- !u!1001 &2061567167
 PrefabInstance:
   m_ObjectHideFlags: 0
