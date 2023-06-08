@@ -414,13 +414,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: characterPosition.x
+      value: 35.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: characterPosition.y
+      value: -6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: characterPosition.z
+      value: 0.05327442
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName
-      value: Scenes/Town
+      value: Scenes/TownWithTileMap
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: d96c50e7efd07d74e9bdd940131874c7, type: 3}
+      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -623,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1173186055}
-  characterPosition: {x: 20, y: -1, z: 0}
+  characterPosition: {x: 35.17, y: -6.75, z: 0.05327442}
   requiresKnowledge: []
   requiresPosession: []
 --- !u!4 &1840034963
