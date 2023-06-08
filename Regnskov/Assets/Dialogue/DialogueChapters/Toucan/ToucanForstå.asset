@@ -10,17 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: Bygning2
+  m_Name: "ToucanForst\xE5"
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Med din hj\xE6lp er vores by hel igen. Jeg h\xE5ber du har oplevet
-      en l\xE6ring i dit arbejde med skoven."
-    face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
-  - content: "Har du v\xE6ret henne og tale med Modertr\xE6et siden?"
-    face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
-  requiresKnowledge: {fileID: 11400000, guid: b368621432ae7224883e86f6abea09e2, type: 2}
+  - content: "At s\xE6tte I verden, at give n\xE6ring."
+    face: {fileID: 0}
+  - content: "At f\xF8de uden at eje."
+    face: {fileID: 0}
+  - content: At handle uden at forlange.
+    face: {fileID: 0}
+  - content: At vejlede uden at bestemme.
+    face: {fileID: 0}
+  - content: Det er vejen.
+    face: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: fe5d38b9566ed3a429a12f3db0cac7e0, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 0}
-  priority: 0
+  priority: 1
   replies: []
