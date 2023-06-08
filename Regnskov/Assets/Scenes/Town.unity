@@ -735,7 +735,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 2255f19508668cf468e39dfa62f9c585, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -801,9 +801,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   chapters:
-  - {fileID: 11400000, guid: 942c1fd5dd48d0348a2edce5e88930be, type: 2}
-  - {fileID: 11400000, guid: 2bf8613d8fe6a904ebc031ca980d2f36, type: 2}
-  randomizeOrder: 0
+  - {fileID: 11400000, guid: bf9978b584fe9504293a10b5e4425af6, type: 2}
+  - {fileID: 11400000, guid: 0cb170f8da696d84785957f0c806f950, type: 2}
+  - {fileID: 11400000, guid: 73de234f70b8d0943a2de39de020b141, type: 2}
+  - {fileID: 11400000, guid: b78058028bd41d24ca8874205f8607ef, type: 2}
+  - {fileID: 11400000, guid: 4c47b06d2492b324f885bccd3f6d8040, type: 2}
+  - {fileID: 11400000, guid: 14a7341df72de1d4c907b1f889847a16, type: 2}
+  - {fileID: 11400000, guid: 466227e629ffb5d41b2575795ee1b411, type: 2}
+  - {fileID: 11400000, guid: 26e86b3cd46c09a47a898b075f541a16, type: 2}
+  - {fileID: 11400000, guid: 6356e5f013efcb04eb8424bb923bd851, type: 2}
+  randomizeOrder: 1
 --- !u!1001 &546259157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3231,7 +3238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1959109072
 Transform:
   m_ObjectHideFlags: 0
