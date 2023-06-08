@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
+  m_Name: Bygning1
+  m_EditorClassIdentifier: 
+  chunks:
+  - content: "Tak for at hj\xE6lpe med den nye bygning. Det er godt at du har fundet
+      en vej her i regnskoven."
+    face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
+  - content: "Skoven er taknemlig for at du byggede et nyt hus af dens gamle tr\xE6."
+    face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
+  requiresKnowledge: {fileID: 0}
+  requiresPosession: {fileID: 0}
+  gives: {fileID: 0}
+  avoid: {fileID: 0}
+  priority: 0
+  replies: []

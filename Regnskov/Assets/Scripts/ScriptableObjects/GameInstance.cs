@@ -13,4 +13,5 @@ public class GameInstance : ScriptableObject
     public bool posessionObject = true;
     public List<GameInstance> preRequisites;
     public bool unique = false;
+
 }

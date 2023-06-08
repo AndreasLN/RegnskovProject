@@ -26,6 +26,8 @@ public class DialogueChunk
 
 public class DialogueCollection : MonoBehaviour
 {
+    DialogueChapter preResult = null;
+
     public bool isActive = false;
     public List<DialogueChapter> chapters;
 
@@ -33,17 +35,35 @@ public class DialogueCollection : MonoBehaviour
 
     public DialogueChapter NextChapter(List<GameInstance> knowledge, List<GameInstance> posession)
     {
+
+
         // c = current chapter in Iteration
-        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)));
+        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
+
+        result.Sort((x, y) => x.priority.CompareTo(y.priority));
 
         if (result.Count > 0)
         {
-            if (randomizeOrder)
+            if (randomizeOrder && result[result.Count - 1].priority == false)
             {
-                int rdm = Random.Range(0, result.Count);
+                int rdm = Random.Range(0, result.Count -1);
+                preResult = result[rdm];
+
                 return result[rdm];
+                
+                
             }
-            return result[0];
+            else
+            {
+
+                preResult = result[result.Count - 1];
+
+                return result[result.Count - 1];
+
+            }
+
+
+
         }
 
         return null;

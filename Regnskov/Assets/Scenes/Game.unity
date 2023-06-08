@@ -861,6 +861,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 113098914}
+    - target: {fileID: 2298882796711179230, guid: d921caed2e8233448a692f238e297da7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298882796711179230, guid: d921caed2e8233448a692f238e297da7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298882796711179230, guid: d921caed2e8233448a692f238e297da7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2549920358927248708, guid: d921caed2e8233448a692f238e297da7, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1377,6 +1389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c4551109598af4fb3335e9bafdfd2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  karma: 0
   maxHunger: 50
   hunger: 50
   fishPounds: 0

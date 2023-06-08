@@ -16,6 +16,7 @@ public class DialogueChapter : ScriptableObject
 
     private DialogueChunk lastChunk;
 
+    public bool priority;
 
     public List<DialogueReply> replies;
 
