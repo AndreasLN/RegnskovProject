@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
+  m_Name: Post 1. hut
+  m_EditorClassIdentifier: 
+  chunks:
+  - content: "Hej! Hvor er det flot med den nye hytte bygget! Det var venligt af
+      dig at hj\xE6lpe os."
+    face: {fileID: 0}
+  requiresKnowledge: {fileID: 0}
+  requiresPosession: {fileID: 0}
+  gives: {fileID: 0}
+  avoid: {fileID: 0}
+  priority: 0
+  replies: []
