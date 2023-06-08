@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
-  m_Name: "Levem\xE5de"
+  m_Name: Toucan1
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Du kommer m\xE5ske fra en anden m\xE5de at g\xF8re det p\xE5."
-    face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
-  - content: "Men for at kunne v\xE6re i balance med skoven, m\xE5 vi tage hvad den
-      giver, frem for at t\xF8mme den."
-    face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
+  - content: Krashj!Bilambi?Kolibishba
+    face: {fileID: 0}
+  - content: "H\xE6\xE6hbobilumbo..."
+    face: {fileID: 0}
+  - content: SaulGiggkabku
+    face: {fileID: 0}
+  - content: Watashinokambu?
+    face: {fileID: 0}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
-  gives: {fileID: 0}
+  gives: {fileID: 11400000, guid: 877d7d740e6498f4fac2d71381f846e3, type: 2}
   avoid: {fileID: 0}
-  priority: 0
+  priority: 1
   replies: []
