@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d8d5e66df8a2841a2e51af381ea267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPos: {x: 0, y: 0, z: 0}
+  characterPos: {x: 34, y: -23, z: 0}
 --- !u!1 &1305989562
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,11 +455,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.x
-      value: -15
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.y
-      value: -1
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.z
@@ -467,12 +467,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName
-      value: Scenes/Town
+      value: Scenes/TownWithTileMap
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: d96c50e7efd07d74e9bdd940131874c7, type: 3}
+      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_RootOrder
       value: 2

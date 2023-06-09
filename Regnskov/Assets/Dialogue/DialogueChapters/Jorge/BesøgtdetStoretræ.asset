@@ -18,7 +18,7 @@ MonoBehaviour:
   - content: "Det er sundt at v\xE6re i skoven og at tage sig tid til at vise sin
       respekt. Det kan v\xE6re du opdager noget nyt."
     face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
-  requiresKnowledge: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: 3ef96275d14bbee4084c30d4787a516e, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 0}

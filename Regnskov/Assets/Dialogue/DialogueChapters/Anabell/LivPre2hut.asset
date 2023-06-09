@@ -15,10 +15,10 @@ MonoBehaviour:
   chunks:
   - content: "Skoven er det der s\xF8rger for at vi kan leve, vandet er liv og solen
       er liv."
-    face: {fileID: 21300000, guid: 8984b5ca0718c7a4ab5cd624f20d058d, type: 3}
+    face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
   - content: "Skoven lever p\xE5 det samme som vi g\xF8r, og vi m\xE5 passe p\xE5
       den, som vi g\xF8r vores familie."
-    face: {fileID: 21300000, guid: 8984b5ca0718c7a4ab5cd624f20d058d, type: 3}
+    face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
   requiresKnowledge: {fileID: 11400000, guid: 9d94c8eb6314d9243a9d153a841722ef, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}

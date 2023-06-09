@@ -40,7 +40,7 @@ public class FishController : MonoBehaviour
     private float screenY;
     private int spawnExtra;
     private Vector2 spawnPos;
-    
+    public GameInstance gameInstance;
     
 
     private void Start()
@@ -124,6 +124,16 @@ public class FishController : MonoBehaviour
 
     public void EndMiniGame()
     {
+
+        
+
+        if (!PlayerMovement.instance.knowledge.Contains(gameInstance))
+        {
+            PlayerMovement.instance.knowledge.Add(gameInstance);
+
+        }
+
+
         Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
 
         sceneLoader.Activate(characterPosition);
