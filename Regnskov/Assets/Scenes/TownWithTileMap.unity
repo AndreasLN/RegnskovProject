@@ -14698,7 +14698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1379427032}
-  characterPosition: {x: -11, y: -6, z: 0}
+  characterPosition: {x: -9, y: -6, z: 0}
   requiresKnowledge: []
   requiresPosession: []
 --- !u!61 &1556391021
