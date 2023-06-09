@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;
+
     Rigidbody2D rigidbody2d;
     float horizontal;
     float vertical;
@@ -20,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+
         rigidbody2d = GetComponent<Rigidbody2D>();
         gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
 

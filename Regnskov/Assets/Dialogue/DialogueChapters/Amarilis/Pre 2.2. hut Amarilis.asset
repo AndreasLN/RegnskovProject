@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunks:
   - content: Har du en uddannelse?
-    face: {fileID: 0}
+    face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
   - content: 'Ja? - I hvad? '
-    face: {fileID: 0}
+    face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
   - content: "Sp\xE6ndende."
-    face: {fileID: 0}
+    face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
   - content: "Vi har f\xE5et skoler herude nu, s\xE5 nu kan vi ogs\xE5 uddanne os."
-    face: {fileID: 0}
-  requiresKnowledge: {fileID: 0}
+    face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
+  requiresKnowledge: {fileID: 11400000, guid: 9d94c8eb6314d9243a9d153a841722ef, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 0}

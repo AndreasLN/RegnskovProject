@@ -8,6 +8,8 @@ TagManager:
   - PuzzleButton
   - Undefined
   - Fish
+  - Target
+  - Arrow
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - Camera
   - Camera Border
-  - 
+  - Mouse
   - 
   - 
   - 

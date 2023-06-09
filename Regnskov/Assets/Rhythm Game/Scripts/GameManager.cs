@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
     public Text percentHitText, normalsText, goodsText, perfectsText, missesText, rankText, finalScoreText;
 
     private bool canEnd;
+    public GameInstance gameInstance;
+
 
     void Start()
     {
@@ -64,12 +66,12 @@ public class GameManager : MonoBehaviour
         
         if (canEnd) // når man kan slutte spillet skal man trykke på escape for at komme ud af det.
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            /*if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
 
                 sceneLoader.Activate(characterPosition);
-            }
+            }*/
         }
         notesNow = FindObjectsOfType<noteObject>().Length; // denne variabel skal sige hvor mange pile, der er lige nu
 
@@ -133,6 +135,7 @@ public class GameManager : MonoBehaviour
                     }
                 }
 
+              
                 rankText.text = rankValue;
 
                 finalScoreText.text = currentScore.ToString();
@@ -148,6 +151,22 @@ public class GameManager : MonoBehaviour
             theMusic.Stop();
 
         }
+    }
+
+    public void EndMinigame()
+    {
+
+        if (!PlayerMovement.instance.knowledge.Contains(gameInstance))
+        {
+            PlayerMovement.instance.knowledge.Add(gameInstance);
+
+        }
+
+
+        Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
+
+        sceneLoader.Activate(characterPosition);
+
     }
 
     public void noteHit()

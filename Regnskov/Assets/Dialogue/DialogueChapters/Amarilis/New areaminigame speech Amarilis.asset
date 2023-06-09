@@ -16,15 +16,15 @@ MonoBehaviour:
   - content: "Hej! Vi skal til at danse nu her, har du lyst til at pr\xF8ve at spille
       p\xE5 trommer?"
     face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
-  requiresKnowledge: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: da9489ef5998f0b43a26ebc9a6ae843c, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
-  avoid: {fileID: 0}
-  priority: 0
+  avoid: {fileID: 11400000, guid: 5cecab101da3b0a44ab5e63e054e3fec, type: 2}
+  priority: 1
   replies:
   - replyTitle: Ja
     replyTarget: {fileID: 11400000, guid: b34f47bd96ddb9448af57661ba2d137c, type: 2}
     endDialogue: 0
   - replyTitle: Nej
-    replyTarget: {fileID: 0}
+    replyTarget: {fileID: 11400000, guid: 3b7f200644b7a03409d85704023fc858, type: 2}
     endDialogue: 0

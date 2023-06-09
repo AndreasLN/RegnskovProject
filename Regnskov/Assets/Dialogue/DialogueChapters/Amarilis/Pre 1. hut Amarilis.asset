@@ -15,7 +15,7 @@ MonoBehaviour:
   chunks:
   - content: "Hej! Det er godt vejr i dag. Jeg h\xE5ber der er dans senere."
     face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
-  requiresKnowledge: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: da9489ef5998f0b43a26ebc9a6ae843c, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 0}
