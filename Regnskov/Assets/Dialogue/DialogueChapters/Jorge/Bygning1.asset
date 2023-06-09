@@ -21,6 +21,6 @@ MonoBehaviour:
   requiresKnowledge: {fileID: 11400000, guid: 9d94c8eb6314d9243a9d153a841722ef, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
-  avoid: {fileID: 0}
+  avoid: {fileID: 11400000, guid: b368621432ae7224883e86f6abea09e2, type: 2}
   priority: 0
   replies: []

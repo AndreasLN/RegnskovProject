@@ -66,12 +66,12 @@ public class GameManager : MonoBehaviour
         
         if (canEnd) // når man kan slutte spillet skal man trykke på escape for at komme ud af det.
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            /*if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
 
                 sceneLoader.Activate(characterPosition);
-            }
+            }*/
         }
         notesNow = FindObjectsOfType<noteObject>().Length; // denne variabel skal sige hvor mange pile, der er lige nu
 
