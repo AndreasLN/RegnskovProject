@@ -2303,6 +2303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1498778014}
   characterPosition: {x: 0, y: 0, z: 0}
+  requiresKnowledge: []
+  requiresPosession: []
 --- !u!4 &1393566071
 Transform:
   m_ObjectHideFlags: 0
@@ -3138,7 +3140,6 @@ GameObject:
   - component: {fileID: 2114560053}
   - component: {fileID: 2114560052}
   - component: {fileID: 2114560055}
-  - component: {fileID: 2114560056}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
@@ -3253,18 +3254,6 @@ MonoBehaviour:
   arrowError: 1
   endGame: 0
   mainCam: {fileID: 694430108}
---- !u!114 &2114560056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114560051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7692165577a304d9d863eb57d16bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2133214798
 GameObject:
   m_ObjectHideFlags: 0

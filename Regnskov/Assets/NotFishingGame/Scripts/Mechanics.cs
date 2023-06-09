@@ -10,6 +10,8 @@ public class Mechanics : MonoBehaviour
 
     [SerializeField] Transform circle;
 
+    public GameObject firePlace;
+
     float circlePosition;
     float circleDestination;
 
@@ -40,9 +42,9 @@ public class Mechanics : MonoBehaviour
 
 
 
-
     void Start()
     {
+
 
         Resize();
 
@@ -52,10 +54,10 @@ public class Mechanics : MonoBehaviour
     {
 
         Bounds b = hookSpriteRenderer.bounds;
-        float ySize = b.size.y;
+        float xSize = b.size.x;
         Vector3 ls = hook.localScale;
         float distance = Vector3.Distance(topPivot.position, bottomPivot.position);
-        ls.y = (distance / ySize * hookSize);
+        ls.x = (distance / xSize * hookSize);
         hook.localScale = ls;
 
     }
@@ -88,9 +90,18 @@ public class Mechanics : MonoBehaviour
 
             hookProgress += hookPower * Time.deltaTime;
 
+            if (firePlace.GetComponent<FireplaceAnimation>().fireHigh == false ) 
+            {
+                firePlace.GetComponent<FireplaceAnimation>().fireHigh = true;
+
+            }
+
+
         }
         else
         {
+
+            firePlace.GetComponentInChildren<FireplaceAnimation>().fireHigh = false;
 
             hookProgress -= hookProgressDegradationPower * Time.deltaTime; // progress skal formindskes, hvis hookarea ikke er over circle
 
