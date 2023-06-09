@@ -1,3 +1,4 @@
+using GameBaseSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,10 @@ public class Mechanics : MonoBehaviour
 
     [SerializeField] Transform circle;
 
+    public float hungerAmount;
     public GameObject firePlace;
+    public SceneActionComponent sceneLoader;
+    public Vector3 characterPosition;
 
     float circlePosition;
     float circleDestination;
@@ -131,7 +135,7 @@ public class Mechanics : MonoBehaviour
     {
 
         pause = true;
-        Debug.Log("YOU LOSE");
+        sceneLoader.Activate(characterPosition);
 
     }
 
@@ -139,7 +143,10 @@ public class Mechanics : MonoBehaviour
     {
 
         pause = true;
-        Debug.Log("YOU WIN!");
+
+        CustomGameManager.instance.hunger += hungerAmount;
+
+        sceneLoader.Activate(characterPosition);
 
 
     }
