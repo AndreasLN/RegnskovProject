@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 30357036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 394172586}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: EndMinigame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &30357036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -485,6 +498,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -620,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -648,6 +663,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -783,6 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -811,6 +828,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -946,6 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -974,6 +993,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -1189,6 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -1217,6 +1238,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -1432,6 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -1460,6 +1483,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -1744,6 +1768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -1772,6 +1797,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -1907,6 +1933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -1935,6 +1962,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -2036,8 +2064,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471a0b87540734b928ed42a89060e91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 841629714}
-  characterPosition: {x: 0, y: 0, z: 0}
+  characterPosition: {x: 20.06, y: -17.48, z: 0.05327442}
   theMusic: {fileID: 1082156435}
   startPlaying: 0
   theBS: {fileID: 487599378}
@@ -2064,6 +2093,7 @@ MonoBehaviour:
   missesText: {fileID: 325538177}
   rankText: {fileID: 1294892955}
   finalScoreText: {fileID: 745663033}
+  gameInstance: {fileID: 11400000, guid: f838cf854e99350498cd847bafdc1aff, type: 2}
 --- !u!4 &394172587
 Transform:
   m_ObjectHideFlags: 0
@@ -2770,6 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -2798,6 +2829,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -2933,6 +2965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -2961,6 +2994,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -3096,6 +3130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -3124,6 +3159,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -3259,6 +3295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -3287,6 +3324,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -3682,6 +3720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -3710,6 +3749,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -3799,7 +3839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &766832846
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3935,6 +3975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -3963,6 +4004,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -4043,28 +4085,60 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: characterPosition.x
+      value: 20.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: characterPosition.y
+      value: -17.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: characterPosition.z
+      value: 0.05327442
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName
-      value: Scenes/Town
+      value: Scenes/TownWithTileMap
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: d96c50e7efd07d74e9bdd940131874c7, type: 3}
+      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: sceneAction.onFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: sceneAction.onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 841629714}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: sceneAction.onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnloadCurrent
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: sceneAction.onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameBaseSystem.SceneActionComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: sceneAction.onFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 358.18115
+      value: 19.84
       objectReference: {fileID: 0}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 233.91684
+      value: -16.95
       objectReference: {fileID: 0}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.118241616
+      value: 0.05327442
       objectReference: {fileID: 0}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4254,6 +4328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -4282,6 +4357,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -4417,6 +4493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -4445,6 +4522,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -4580,6 +4658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -4608,6 +4687,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -4943,6 +5023,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130982782}
   m_CullTransparentMesh: 1
+--- !u!1001 &1139527288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2866617399703220141, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_Name
+      value: SceneController
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.3859653
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.676683
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.708534
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540642400486802567, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7544886803445004014, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
+      propertyPath: gameState
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b71c895d9f6b5a141b4cc7a779199f76, type: 3}
 --- !u!1 &1160336783
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,6 +5355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -5242,6 +5384,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -5377,6 +5520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -5405,6 +5549,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -5540,6 +5685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -5568,6 +5714,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -5703,6 +5850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -5731,6 +5879,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -6026,6 +6175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -6054,6 +6204,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -6324,6 +6475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -6352,6 +6504,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 275
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -6487,6 +6640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -6515,6 +6669,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -6650,6 +6805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -6678,6 +6834,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -6813,6 +6970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -6841,6 +6999,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -7160,6 +7319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -7188,6 +7348,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -7323,6 +7484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -7351,6 +7513,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -7486,6 +7649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -7514,6 +7678,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -7649,6 +7814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -7677,6 +7843,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -7878,6 +8045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -7906,6 +8074,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -7975,6 +8144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -8003,6 +8173,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -8218,6 +8389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -8246,6 +8418,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 274
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -8381,6 +8554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -8409,6 +8583,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -8625,6 +8800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -8653,6 +8829,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -9083,6 +9260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -9111,6 +9289,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 276
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}
@@ -9420,6 +9599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b208ba10b8b94ddd968de02a3ae06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sceneLoader: {fileID: 0}
   characterPosition: {x: 0, y: 0, z: 0}
   theMusic: {fileID: 0}
@@ -9448,6 +9628,7 @@ MonoBehaviour:
   missesText: {fileID: 0}
   rankText: {fileID: 0}
   finalScoreText: {fileID: 0}
+  gameInstance: {fileID: 0}
   canBePressed: 0
   keyToPress: 273
   hitEffect: {fileID: 1535006531669398996, guid: b3cd4fe98c30e441d83c6578125207a0, type: 3}

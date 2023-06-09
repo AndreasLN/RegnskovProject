@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfab4d4b01f97442a339130fc7764e2, type: 3}
   m_Name: minigame speech Nej Amarilis
   m_EditorClassIdentifier: 
-  chunks: []
+  chunks:
+  - content: "Okay, hvis du f\xE5r lyst s\xE5 bare sp\xF8rg"
+    face: {fileID: 21300000, guid: 78867a5a41e0cc145a39248f6876c769, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}

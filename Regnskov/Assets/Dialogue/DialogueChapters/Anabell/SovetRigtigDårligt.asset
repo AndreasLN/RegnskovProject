@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "SovetRigtigD\xE5rligt"
   m_EditorClassIdentifier: 
   chunks:
-  - content: Fuck dig din fucking taber.
+  - content: "Ej \xF8v, god bedring s\xE5."
     face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}

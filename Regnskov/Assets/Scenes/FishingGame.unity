@@ -1341,6 +1341,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6834611912766803854, guid: 3c16acd8f7b241a42a8af9755bff5411, type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834611912766803854, guid: 3c16acd8f7b241a42a8af9755bff5411, type: 3}
       propertyPath: orthographic size
       value: 5
       objectReference: {fileID: 0}
@@ -1400,6 +1404,7 @@ MonoBehaviour:
   gameTimeLeft: 0
   gameTimeStart: 60
   spawnTime: 3
+  gameInstance: {fileID: 11400000, guid: f5ee0899cb102a84cae38f0595b66cb3, type: 2}
 --- !u!4 &765651063
 Transform:
   m_ObjectHideFlags: 0
@@ -2303,6 +2308,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1498778014}
   characterPosition: {x: 0, y: 0, z: 0}
+  requiresKnowledge: []
+  requiresPosession: []
 --- !u!4 &1393566071
 Transform:
   m_ObjectHideFlags: 0
@@ -2327,20 +2334,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.x
-      value: 0
+      value: 14.86
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.y
-      value: 0
+      value: -18.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
+      propertyPath: characterPosition.z
+      value: 0.045778845
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName
-      value: Scenes/LakeTiled
+      value: Scenes/TownWithTileMap
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: cddce0e119b662d47b8d02bafdb0bff4, type: 3}
+      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
     - target: {fileID: 4846321353372692279, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3138,7 +3149,6 @@ GameObject:
   - component: {fileID: 2114560053}
   - component: {fileID: 2114560052}
   - component: {fileID: 2114560055}
-  - component: {fileID: 2114560056}
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
@@ -3253,18 +3263,6 @@ MonoBehaviour:
   arrowError: 1
   endGame: 0
   mainCam: {fileID: 694430108}
---- !u!114 &2114560056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114560051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7692165577a304d9d863eb57d16bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2133214798
 GameObject:
   m_ObjectHideFlags: 0
