@@ -77,7 +77,7 @@ public class Mechanics : MonoBehaviour
     {
 
         Vector3 ls = progressBarContainer.localScale;
-        ls.y = hookProgress;
+        ls.x = hookProgress;
         progressBarContainer.localScale = ls;
 
         float min = hookposition - hookSize / 2;
