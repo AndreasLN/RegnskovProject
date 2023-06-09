@@ -15,7 +15,7 @@ MonoBehaviour:
   chunks:
   - content: "Hej! F\xE5r du lavet nogle forskellige ting? Jeg kan bedst lide at
       bruge min tid p\xE5 at lytte til fugle sang"
-    face: {fileID: 21300000, guid: 8984b5ca0718c7a4ab5cd624f20d058d, type: 3}
+    face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
   requiresKnowledge: {fileID: 11400000, guid: 3a4654c3d0c0a2f4e9708527fae9e5a6, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}

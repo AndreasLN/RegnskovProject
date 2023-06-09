@@ -68,7 +68,7 @@ public class Door : MonoBehaviour
             {
                 GameObject player = collision.gameObject;
 
-                Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
+                //Vector3 newPos = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
 
                 //collision.gameObject.transform.position = new Vector3(characterPosition.x, characterPosition.y, characterPosition.z);
 
