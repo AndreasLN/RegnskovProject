@@ -18,7 +18,7 @@ MonoBehaviour:
   - content: "Men for at kunne v\xE6re i balance med skoven, m\xE5 vi tage hvad den
       giver, frem for at t\xF8mme den."
     face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
-  requiresKnowledge: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: 9d94c8eb6314d9243a9d153a841722ef, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 0}

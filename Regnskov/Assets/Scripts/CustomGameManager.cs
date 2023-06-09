@@ -20,7 +20,7 @@ public class CustomGameManager : MonoBehaviour
     public Slider hungerSlider;
 
     public Image fade;
-    float timer = 1.0f;
+    float timer = 20.0f;
 
     public bool paused;
     

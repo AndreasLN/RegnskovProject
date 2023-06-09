@@ -24,5 +24,5 @@ MonoBehaviour:
   requiresPosession: {fileID: 0}
   gives: {fileID: 11400000, guid: 3ef96275d14bbee4084c30d4787a516e, type: 2}
   avoid: {fileID: 0}
-  priority: 1
+  priority: 0
   replies: []

@@ -11084,7 +11084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1129002170
 Transform:
   m_ObjectHideFlags: 0
@@ -11093,7 +11093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129002169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5936947, y: -9.500336, z: 10.065439}
+  m_LocalPosition: {x: -6.4, y: -11.3, z: 10.065439}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11250,9 +11250,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   chapters:
-  - {fileID: 11400000, guid: 942c1fd5dd48d0348a2edce5e88930be, type: 2}
-  - {fileID: 11400000, guid: 2bf8613d8fe6a904ebc031ca980d2f36, type: 2}
-  randomizeOrder: 0
+  - {fileID: 11400000, guid: 25aa4a8cf0d0b38488310af95deb003c, type: 2}
+  - {fileID: 11400000, guid: 5240d9ad99bc12743a6a1f5424fffa19, type: 2}
+  - {fileID: 11400000, guid: d227a2a50dfe1bb48852389286d0f279, type: 2}
+  - {fileID: 11400000, guid: effedcb0f8a475544b0e662e91159e19, type: 2}
+  - {fileID: 11400000, guid: c269e501b1866784c9bd6533b6dcf1ce, type: 2}
+  - {fileID: 11400000, guid: c736ccf38586c5a4c8456f8f2cf9ab02, type: 2}
+  - {fileID: 11400000, guid: 5d44a054c935b9844a9b7b15edcc58e6, type: 2}
+  - {fileID: 11400000, guid: 15e09c1ad18545845b8a97a721eba7fa, type: 2}
+  - {fileID: 11400000, guid: d0fb3291cbe32394788c7d438cf22d98, type: 2}
+  randomizeOrder: 1
 --- !u!1001 &1145384202
 PrefabInstance:
   m_ObjectHideFlags: 0
