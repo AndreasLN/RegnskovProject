@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/woodwork area.unity
     guid: fe94b14e33c22ab46b31be8dd24dccc3
+  - enabled: 1
+    path: Assets/Scenes/BurntForest.unity
+    guid: 1d2c978f23b525141959e1ba4836890f
   m_configObjects: {}

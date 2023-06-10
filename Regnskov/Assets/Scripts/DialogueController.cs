@@ -226,6 +226,25 @@ public class DialogueController : MonoBehaviour
                     }
                 }
 
+                if (activeChapter.takes != null)
+                {
+                    if (activeChapter.takes.knowledgeObject)
+                    {
+                        if (!knowledge.Contains(activeChapter.takes))
+                        {
+                            knowledge.Remove(activeChapter.takes);
+                        }
+                    }
+                    if (activeChapter.takes.posessionObject)
+                    {
+                        if (!posession.Contains(activeChapter.takes) || !activeChapter.takes.unique)
+                        {
+                            posession.Remove(activeChapter.takes);
+                        }
+                    }
+                }
+
+
             }
         }
     }
