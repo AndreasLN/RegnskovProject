@@ -19,9 +19,9 @@ MonoBehaviour:
   - content: "Jeg vil arbejde p\xE5 at sk\xE6re planker af det. Kom tilbage om lidt,
       og tr\xE6et vil v\xE6re klar til dig i tide."
     face: {fileID: 21300000, guid: 759585db7a8d7fa4e9632c923d068274, type: 3}
-  requiresKnowledge: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: 3ef96275d14bbee4084c30d4787a516e, type: 2}
   requiresPosession: {fileID: 0}
-  gives: {fileID: 0}
-  avoid: {fileID: 0}
-  priority: 0
+  gives: {fileID: 11400000, guid: dd71b6e9ec09ca54e88eedc9a3319762, type: 2}
+  avoid: {fileID: 11400000, guid: dd71b6e9ec09ca54e88eedc9a3319762, type: 2}
+  priority: 1
   replies: []

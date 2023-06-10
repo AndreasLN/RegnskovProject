@@ -11258,7 +11258,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c736ccf38586c5a4c8456f8f2cf9ab02, type: 2}
   - {fileID: 11400000, guid: 5d44a054c935b9844a9b7b15edcc58e6, type: 2}
   - {fileID: 11400000, guid: 15e09c1ad18545845b8a97a721eba7fa, type: 2}
-  - {fileID: 11400000, guid: d0fb3291cbe32394788c7d438cf22d98, type: 2}
   randomizeOrder: 1
 --- !u!1001 &1145384202
 PrefabInstance:
