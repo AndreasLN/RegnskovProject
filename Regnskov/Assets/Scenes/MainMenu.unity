@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d8d5e66df8a2841a2e51af381ea267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPos: {x: 34, y: -23, z: 0}
+  characterPos: {x: 38.92, y: -26.31, z: -0.10515329}
 --- !u!1 &1305989562
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,15 +455,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.x
-      value: 34
+      value: 38.92
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.y
-      value: -23
+      value: -26.31
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.z
-      value: -0.01371459
+      value: -0.10515329
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: sceneAction.sceneField.sceneName

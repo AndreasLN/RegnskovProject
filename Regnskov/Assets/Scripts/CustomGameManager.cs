@@ -46,24 +46,29 @@ public class CustomGameManager : MonoBehaviour
     private void Update()
     {
 
-        if (JorgeTurnOn.Instance.active && JorgeTurnOn.Instance != null)
+        if(JorgeTurnOn.Instance != null)
         {
-            timer -= Time.deltaTime;
-
-            if (timer < 0)
+            if (JorgeTurnOn.Instance.active)
             {
-                if (!PlayerMovement.instance.knowledge.Contains(JorgeTurnOn.Instance.canGivePlank))
+                timer -= Time.deltaTime;
+
+                if (timer < 0)
                 {
-                    jorgeTimer = jorgeMaxTimer;
+                    if (!PlayerMovement.instance.knowledge.Contains(JorgeTurnOn.Instance.canGivePlank))
+                    {
+                        jorgeTimer = jorgeMaxTimer;
 
 
-                    PlayerMovement.instance.knowledge.Add(JorgeTurnOn.Instance.canGivePlank);
+                        PlayerMovement.instance.knowledge.Add(JorgeTurnOn.Instance.canGivePlank);
+
+                    }
+
 
                 }
-
-
             }
         }
+
+        
 
         if (!paused)
         {
@@ -71,7 +76,7 @@ public class CustomGameManager : MonoBehaviour
 
             if (timer <= 0.0f)
             {
-                timer = 1.0f;
+                timer = 20.0f;
 
                 hunger -= 1;
 
