@@ -11132,7 +11132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1751305904}
-  characterPosition: {x: 8.62, y: -4.55, z: 0.01440046}
+  characterPosition: {x: 312, y: 132, z: 0.01440046}
   requiresKnowledge:
   - {fileID: 11400000, guid: 1c4619a52db9dfe4f8593b93d07210bf, type: 2}
   requiresPosession:
@@ -20520,11 +20520,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.x
-      value: 8.62
+      value: 131
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.y
-      value: -4.55
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 3381040533969679467, guid: 76ec732a685af64478ed2a0879cfc803, type: 3}
       propertyPath: characterPosition.z
