@@ -15,7 +15,10 @@ MonoBehaviour:
   chunks:
   - content: Ej hvor hyggeligt, kom med.
     face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
-  - content: "Du skal bruge nogle fisk til at stege. Du kan sp\xF8rge Jose om hj\xE6lp."
+  - content: Vi laver mad lige herinde ved siden af os.
+    face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
+  - content: "Du skal dog bruge nogle fisk f\xF8rst til at stege. Du kan sp\xF8rge
+      Jose om hj\xE6lp."
     face: {fileID: 21300000, guid: 24235a0288d3f7643954ae0108b22f83, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
