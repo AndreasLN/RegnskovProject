@@ -556,7 +556,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 300, y: -70}
-  m_SizeDelta: {x: 600, y: 140}
+  m_SizeDelta: {x: 580, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694209384
 MonoBehaviour:
@@ -2117,7 +2117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: ec305016f50872748afcf1efff621413, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2616,7 +2616,7 @@ PrefabInstance:
       objectReference: {fileID: 113098914}
     - target: {fileID: 4178979323763315346, guid: a9c6b65293dd82f4bab3ca1b267430fa, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4178979323763315347, guid: a9c6b65293dd82f4bab3ca1b267430fa, type: 3}
       propertyPath: m_Pivot.x
@@ -2785,7 +2785,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 12
   m_TargetDisplay: 0
 --- !u!224 &5444919253201965196
 RectTransform:
@@ -3070,7 +3070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65, y: -144.99998}
+  m_AnchoredPosition: {x: -64.99997, y: -144.99998}
   m_SizeDelta: {x: -200, y: -310}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7663224436642222628

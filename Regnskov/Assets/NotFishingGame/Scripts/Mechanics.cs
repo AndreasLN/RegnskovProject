@@ -1,3 +1,4 @@
+using GameBaseSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class Mechanics : MonoBehaviour
     [SerializeField] Transform circle;
 
     public GameObject firePlace;
+
+    public Canvas canvas;
 
     float circlePosition;
     float circleDestination;
@@ -38,13 +41,21 @@ public class Mechanics : MonoBehaviour
 
     bool pause = false;
 
+    bool won = false;
+
+    float timer;
+
+    public SceneActionComponent sceneActionComponent;
+
+    public Vector3 characterSpawn;
+
     [SerializeField] float failTimer = 10f;
 
 
 
     void Start()
     {
-
+        canvas.gameObject.SetActive(false);
 
         Resize();
 
@@ -72,6 +83,24 @@ public class Mechanics : MonoBehaviour
         ProgressCheck();
 
         
+
+    }
+
+    private void FixedUpdate()
+    {
+
+        if (won)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer < 0) {
+
+                sceneActionComponent.Activate(characterSpawn);
+                won= false;
+
+            }
+
+        }
 
     }
 
@@ -110,7 +139,7 @@ public class Mechanics : MonoBehaviour
             if(failTimer <= 0f)
             {
 
-                Lose();
+                //Lose();
 
             }
 
@@ -139,7 +168,13 @@ public class Mechanics : MonoBehaviour
     {
 
         pause = true;
-        Debug.Log("YOU WIN!");
+
+        won = true;
+
+        timer = 2.5f;
+
+        canvas.gameObject.SetActive(true);
+        CustomGameManager.instance.hunger = CustomGameManager.instance.maxHunger;
 
 
     }
