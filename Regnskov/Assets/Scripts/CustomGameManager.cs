@@ -22,6 +22,10 @@ public class CustomGameManager : MonoBehaviour
     public Image fade;
     float timer = 20.0f;
 
+    float jorgeMaxTimer = 25f;
+
+    float jorgeTimer;
+
     public bool paused;
     
     private void Awake()
@@ -42,13 +46,37 @@ public class CustomGameManager : MonoBehaviour
     private void Update()
     {
 
+        if(JorgeTurnOn.Instance != null)
+        {
+            if (JorgeTurnOn.Instance.active)
+            {
+                timer -= Time.deltaTime;
+
+                if (timer < 0)
+                {
+                    if (!PlayerMovement.instance.knowledge.Contains(JorgeTurnOn.Instance.canGivePlank))
+                    {
+                        jorgeTimer = jorgeMaxTimer;
+
+
+                        PlayerMovement.instance.knowledge.Add(JorgeTurnOn.Instance.canGivePlank);
+
+                    }
+
+
+                }
+            }
+        }
+
+        
+
         if (!paused)
         {
             timer -= Time.deltaTime;
 
             if (timer <= 0.0f)
             {
-                timer = 1.0f;
+                timer = 20.0f;
 
                 hunger -= 1;
 
