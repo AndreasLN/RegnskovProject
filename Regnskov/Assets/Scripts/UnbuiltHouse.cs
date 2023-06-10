@@ -18,7 +18,6 @@ public class UnbuiltHouse : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            print("false");
         }
 
     }

@@ -132,7 +132,6 @@ public class DialogueController : MonoBehaviour
         {
             EndCollection();
         }
-        print(notClose);
         
     }
 

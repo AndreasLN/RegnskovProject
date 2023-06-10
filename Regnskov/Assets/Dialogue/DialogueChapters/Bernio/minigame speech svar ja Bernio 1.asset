@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: minigame speech svar ja Bernio 1
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Dejligt, s\xE5 m\xE5 vi hellere komme i gang"
+  - content: "Dejligt, s\xE5 m\xE5 vi hellere komme i gang."
     face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}

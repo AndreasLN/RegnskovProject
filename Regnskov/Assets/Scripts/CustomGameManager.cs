@@ -13,6 +13,8 @@ public class CustomGameManager : MonoBehaviour
 
     public float hunger = 50;
 
+    float updatedHunger;
+
     public float fishPounds;
 
 
@@ -41,10 +43,18 @@ public class CustomGameManager : MonoBehaviour
 
         hungerSlider.value = ratio;
 
+        updatedHunger = hunger;
+
     }
 
     private void Update()
     {
+
+
+        if(hunger != updatedHunger)
+        {
+            UpdateHunger();
+        }
 
         if(JorgeTurnOn.Instance != null)
         {

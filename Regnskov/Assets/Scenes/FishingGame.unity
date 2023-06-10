@@ -1405,6 +1405,7 @@ MonoBehaviour:
   gameTimeStart: 15
   spawnTime: 3
   gameInstance: {fileID: 11400000, guid: f5ee0899cb102a84cae38f0595b66cb3, type: 2}
+  hasFish: {fileID: 11400000, guid: a1d733e4cc9b2954c86c1b3bb95c8af5, type: 2}
 --- !u!4 &765651063
 Transform:
   m_ObjectHideFlags: 0
