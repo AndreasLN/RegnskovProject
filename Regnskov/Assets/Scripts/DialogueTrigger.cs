@@ -71,6 +71,7 @@ public class DialogueTrigger : MonoBehaviour
             //print(dialogueScript);
             //dialogueScript.StartDialogue();
             dialogueCollection.isActive = true;
+
             DialogueController.instance.SetCollection(dialogueCollection, pm.knowledge, pm.posession);
 
 

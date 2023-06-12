@@ -11179,8 +11179,8 @@ MonoBehaviour:
   characterPosition: {x: 312, y: 132, z: 0.01440046}
   requiresKnowledge:
   - {fileID: 11400000, guid: 1c4619a52db9dfe4f8593b93d07210bf, type: 2}
-  requiresPosession:
   - {fileID: 11400000, guid: a1d733e4cc9b2954c86c1b3bb95c8af5, type: 2}
+  requiresPosession: []
 --- !u!4 &1026463632
 Transform:
   m_ObjectHideFlags: 0
