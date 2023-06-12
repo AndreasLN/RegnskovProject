@@ -87,6 +87,8 @@ public class DialogueController : MonoBehaviour
     }
     public void SetCollection(DialogueCollection collection, List<GameInstance> knowledge, List<GameInstance> posession)
     {
+
+        PlayerMovement.instance.stopMovement = true;
         awaitReply = false;
         activeChunk = null;
         activeChapter = null;
@@ -99,6 +101,8 @@ public class DialogueController : MonoBehaviour
 
     public void EndCollection ()
     {
+        PlayerMovement.instance.stopMovement = false;
+
         started = false;
         waitForNext = false;
         awaitReply = false;

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 15291410}
   - component: {fileID: 15291409}
   - component: {fileID: 15291408}
+  - component: {fileID: 15291411}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -219,6 +220,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 15291411}
+        m_TargetAssemblyTypeName: TurnOffButton, Assembly-CSharp
+        m_MethodName: TurnButtonOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &15291409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +270,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15291406}
   m_CullTransparentMesh: 1
+--- !u!114 &15291411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15291406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cad344efc72e104d9495b34b409942f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &235482101
 GameObject:
   m_ObjectHideFlags: 0
