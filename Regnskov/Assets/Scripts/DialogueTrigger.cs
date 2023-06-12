@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueTrigger : MonoBehaviour
 {
     Dialogue dialogueScript;
+
+
+
+
     private bool playerDetected;
 
     public GameObject closeTrigger;
@@ -15,11 +20,16 @@ public class DialogueTrigger : MonoBehaviour
     PlayerMovement pm;
     private void Awake()
     {
+
+        
         closeDialogueTrigger = closeTrigger.GetComponent<CloseDialogueTrigger>();
 
         dialogueScript = Resources.FindObjectsOfTypeAll<Dialogue>()[0];
 
     }
+
+
+
 
     //Detect trigger with player
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,7 +66,7 @@ public class DialogueTrigger : MonoBehaviour
     {
 
 
-        if (playerDetected && Input.GetMouseButtonDown(1) && closeDialogueTrigger.mousePointed && !Dialogue.instance.window.gameObject.activeSelf)
+        if (playerDetected && Input.GetMouseButtonDown(1) && closeDialogueTrigger.mousePointed && !DialogueController.instance.window.gameObject.activeSelf /*!Dialogue.instance.window.gameObject.activeSelf*/)
         {
             //print(dialogueScript);
             //dialogueScript.StartDialogue();

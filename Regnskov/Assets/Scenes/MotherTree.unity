@@ -806,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333a33a2272c9654f8259d2d3de8af90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInstance: 0
   window: {fileID: 2100419920}
   indicator: {fileID: 375998734}
   dialogueText: {fileID: 1892848054}
@@ -2067,6 +2068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98d81806e9abcc468926296b713e297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specificdialogueController: {fileID: 853289332}
   closeTrigger: {fileID: 33745227}
   dialogueCollection: {fileID: 2030202226}
 --- !u!114 &2030202226
