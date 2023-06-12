@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
     public static DialogueController instance;
+
+    public DialogueController preInstance;
+
+    //public bool isInstance;
+
     public GameObject window;
     //Indicator
     public GameObject indicator;
@@ -49,9 +55,26 @@ public class DialogueController : MonoBehaviour
         //Dialogue starts as closed
         ToggleIndicator(false);
         ToggleWindow(false);
+
+        if(DialogueController.instance != null )
+        {
+
+            preInstance = DialogueController.instance;
+
+            print(preInstance);
+
+        }
+
         instance = this;
+
+
         //SetCurrentDialogue(testStartDialogue);
 
+    }
+
+    public void SetInstance()
+    {
+        instance = this;
     }
 
     private void ToggleWindow(bool show)
@@ -132,7 +155,6 @@ public class DialogueController : MonoBehaviour
         {
             EndCollection();
         }
-        print(notClose);
         
     }
 
@@ -225,6 +247,25 @@ public class DialogueController : MonoBehaviour
                         }
                     }
                 }
+
+                if (activeChapter.takes != null)
+                {
+                    if (activeChapter.takes.knowledgeObject)
+                    {
+                        if (!knowledge.Contains(activeChapter.takes))
+                        {
+                            knowledge.Remove(activeChapter.takes);
+                        }
+                    }
+                    if (activeChapter.takes.posessionObject)
+                    {
+                        if (!posession.Contains(activeChapter.takes) || !activeChapter.takes.unique)
+                        {
+                            posession.Remove(activeChapter.takes);
+                        }
+                    }
+                }
+
 
             }
         }

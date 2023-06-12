@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Post 1. hut Bernio
   m_EditorClassIdentifier: 
   chunks: []
-  requiresKnowledge: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: 9d94c8eb6314d9243a9d153a841722ef, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
   avoid: {fileID: 0}

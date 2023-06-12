@@ -41,7 +41,8 @@ public class FishController : MonoBehaviour
     private int spawnExtra;
     private Vector2 spawnPos;
     public GameInstance gameInstance;
-    
+    public GameInstance hasFish;
+
 
     private void Start()
     {
@@ -125,7 +126,13 @@ public class FishController : MonoBehaviour
     public void EndMiniGame()
     {
 
-        
+
+        if (!PlayerMovement.instance.posession.Contains(hasFish) && CustomGameManager.instance.fishPounds > 5)
+        {
+            PlayerMovement.instance.knowledge.Add(hasFish);
+
+        }
+
 
         if (!PlayerMovement.instance.knowledge.Contains(gameInstance))
         {

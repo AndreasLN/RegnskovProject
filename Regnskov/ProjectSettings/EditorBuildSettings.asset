@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/woodwork area.unity
     guid: fe94b14e33c22ab46b31be8dd24dccc3
+  - enabled: 1
+    path: Assets/Scenes/not fishing game.unity
+    guid: 23a12dac42f7b41c28b89ccc23d85937
+  - enabled: 1
+    path: Assets/Scenes/BurntForest.unity
+    guid: 1d2c978f23b525141959e1ba4836890f
   m_configObjects: {}

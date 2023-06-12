@@ -21,6 +21,16 @@ MonoBehaviour:
   - content: "Mit navn er Brenio. Jeg er byens nok\xF3 (leder). Det ville v\xE6re
       godt hvis du tog dig tid til at hilse p\xE5 de andre landsbyboere."
     face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
+  - content: "De kan l\xE6rer dig nogle vigtige ting. "
+    face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
+  - content: "Vi skal til at bygge nogle nye bygninger s\xE5 jeg vil anbefale at
+      du taler med Jorge."
+    face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
+  - content: Han plejer at holde til nord for byen.
+    face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
+  - content: "Hvis du tilf\xE6ldigvis skaffer dig nogle planker, kan vi begynde p\xE5
+      at bygge landsbyen."
+    face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
   gives: {fileID: 11400000, guid: a81f2ba041594dc42a229de038aeeaaf, type: 2}
