@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1498778014}
-  characterPosition: {x: 0, y: 0, z: 0}
+  characterPosition: {x: 14.86, y: -18.74, z: 0.045778845}
   fishPrefabs:
   - {fileID: 5536437291060983596, guid: f45d49928ed9e684fb50a98ce23fbeb8, type: 3}
   - {fileID: 5536437291060983596, guid: 28b456d577cc7d8448741d7aa6886396, type: 3}
@@ -1402,9 +1402,10 @@ MonoBehaviour:
   timerInt: 0
   fishCaught: 0
   gameTimeLeft: 0
-  gameTimeStart: 60
+  gameTimeStart: 15
   spawnTime: 3
   gameInstance: {fileID: 11400000, guid: f5ee0899cb102a84cae38f0595b66cb3, type: 2}
+  hasFish: {fileID: 11400000, guid: a1d733e4cc9b2954c86c1b3bb95c8af5, type: 2}
 --- !u!4 &765651063
 Transform:
   m_ObjectHideFlags: 0

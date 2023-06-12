@@ -21,7 +21,6 @@ public class Reloader : MonoBehaviour
     void Awake()
     {
         player = Resources.FindObjectsOfTypeAll<PlayerMovement>()[0];
-        print(player);
         player.gameObject.SetActive(playerActivate);
 
         gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];

@@ -12,6 +12,10 @@ public class DialogueChapter : ScriptableObject
     public GameInstance requiresPosession;
 
     public GameInstance gives;
+
+    public GameInstance takes;
+
+
     public GameInstance avoid;
 
     private DialogueChunk lastChunk;

@@ -18,9 +18,10 @@ MonoBehaviour:
     face: {fileID: 0}
   - content: "Vil du hj\xE6lpe?"
     face: {fileID: 0}
-  requiresKnowledge: {fileID: 0}
+  requiresKnowledge: {fileID: 11400000, guid: a81f2ba041594dc42a229de038aeeaaf, type: 2}
   requiresPosession: {fileID: 0}
   gives: {fileID: 0}
+  takes: {fileID: 0}
   avoid: {fileID: 0}
   priority: 0
   replies:

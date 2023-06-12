@@ -13,17 +13,20 @@ MonoBehaviour:
   m_Name: New areaminigame speech Bernio
   m_EditorClassIdentifier: 
   chunks:
-  - content: "Har du f\xE5et alle materialerne til at bygge en ny hytte? "
+  - content: "Jeg kan se at du har f\xE5et nogle planker!"
     face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
-  requiresKnowledge: {fileID: 0}
-  requiresPosession: {fileID: 0}
+  - content: Vi kunne virkelig bruge dem til at bygge nye huse.
+    face: {fileID: 21300000, guid: 74ef7eed4a39f634fb4af37144cd93f8, type: 3}
+  requiresKnowledge: {fileID: 11400000, guid: a81f2ba041594dc42a229de038aeeaaf, type: 2}
+  requiresPosession: {fileID: 11400000, guid: f302834872e3c794ebb55abca9489175, type: 2}
   gives: {fileID: 0}
-  avoid: {fileID: 0}
-  priority: 0
+  takes: {fileID: 0}
+  avoid: {fileID: 11400000, guid: 9d94c8eb6314d9243a9d153a841722ef, type: 2}
+  priority: 1
   replies:
-  - replyTitle: Ja
+  - replyTitle: "Du m\xE5 gerne f\xE5 dem."
     replyTarget: {fileID: 11400000, guid: 89c581e9cce386a4387a400041cb6534, type: 2}
     endDialogue: 0
-  - replyTitle: Nej
-    replyTarget: {fileID: 11400000, guid: 7fe839f30d334664db6cf077a7de5ef7, type: 2}
-    endDialogue: 0
+  - replyTitle: Ok
+    replyTarget: {fileID: 0}
+    endDialogue: 1
