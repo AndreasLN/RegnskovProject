@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement instance;
 
+    public bool stopMovement = false;
+
     Rigidbody2D rigidbody2d;
     float horizontal;
     float vertical;
@@ -36,14 +38,8 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void SetSpeed()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-
-        animator.SetFloat("Horizontal", horizontal);
-        animator.SetFloat("Vertical", vertical);
 
         if (gameManager.hunger > gameManager.maxHunger * 0.75f)
         {
@@ -52,16 +48,16 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-            if (gameManager.hunger <= gameManager.maxHunger * 0.75f)
+        if (gameManager.hunger <= gameManager.maxHunger * 0.75f)
         {
 
             if (gameManager.hunger <= gameManager.maxHunger * 0.5f)
             {
-                
+
 
                 if (gameManager.hunger <= gameManager.maxHunger * 0.25f)
                 {
-                    
+
 
                     if (gameManager.hunger <= 0)
                     {
@@ -89,6 +85,36 @@ public class PlayerMovement : MonoBehaviour
 
 
         }
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
+
+        if (!stopMovement)
+        {
+
+            animator.SetFloat("Horizontal", horizontal);
+            animator.SetFloat("Vertical", vertical);
+        }
+
+
+        if(stopMovement)
+        {
+            speed = 0.0f;
+        }
+        else{
+
+            SetSpeed();
+
+        }
+
+
+        
 
 
     }

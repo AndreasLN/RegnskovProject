@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
     public static DialogueController instance;
+
+    public DialogueController preInstance;
+
+    //public bool isInstance;
+
     public GameObject window;
     //Indicator
     public GameObject indicator;
@@ -49,9 +55,26 @@ public class DialogueController : MonoBehaviour
         //Dialogue starts as closed
         ToggleIndicator(false);
         ToggleWindow(false);
+
+        if(DialogueController.instance != null )
+        {
+
+            preInstance = DialogueController.instance;
+
+            print(preInstance);
+
+        }
+
         instance = this;
+
+
         //SetCurrentDialogue(testStartDialogue);
 
+    }
+
+    public void SetInstance()
+    {
+        instance = this;
     }
 
     private void ToggleWindow(bool show)
@@ -64,6 +87,8 @@ public class DialogueController : MonoBehaviour
     }
     public void SetCollection(DialogueCollection collection, List<GameInstance> knowledge, List<GameInstance> posession)
     {
+
+        PlayerMovement.instance.stopMovement = true;
         awaitReply = false;
         activeChunk = null;
         activeChapter = null;
@@ -76,6 +101,8 @@ public class DialogueController : MonoBehaviour
 
     public void EndCollection ()
     {
+        PlayerMovement.instance.stopMovement = false;
+
         started = false;
         waitForNext = false;
         awaitReply = false;
