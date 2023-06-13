@@ -1,3 +1,4 @@
+using GameBaseSystem;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,9 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
+    public GameInstance endGame;
+
+
     public static DialogueController instance;
 
     public DialogueController preInstance;
@@ -107,7 +111,20 @@ public class DialogueController : MonoBehaviour
         waitForNext = false;
         awaitReply = false;
         ToggleWindow(false);
+
+       
+
     }
+
+    void CheckForEnd()
+    {
+            
+        Vector3 vector3 = new Vector3(0, 0, 0);
+
+        End.instance.actionComponent.Activate(vector3);
+
+    }
+
     public void NextChapter(DialogueChapter chapter = null)
     {
         for (int i = 0; i < buttons.buttons.Count; i++)
@@ -145,7 +162,6 @@ public class DialogueController : MonoBehaviour
 
     public void GetNextChunk(bool notClose = true)
     {
-        print("hello");
         activeChunk = activeChapter.GetNext(activeChunk);
         if (activeChunk != null)
         {
@@ -195,8 +211,7 @@ public class DialogueController : MonoBehaviour
 
         if ((waitForNext && Input.GetMouseButtonDown(0) && !awaitReply) || (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count -1] == activeChunk))// && !canvas.isActiveAndEnabled)
         {
-            Debug.Log("A: " + (waitForNext && Input.GetKeyDown(KeyCode.E) && !awaitReply));
-            Debug.Log("B: " + (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count - 1] == activeChunk));
+            
             bool notClose = (waitForNext && activeChapter.replies.Count > 0 && !awaitReply && activeChapter.chunks[activeChapter.chunks.Count - 1] == activeChunk);
             waitForNext = false;
 
@@ -236,11 +251,22 @@ public class DialogueController : MonoBehaviour
 
                 if (activeChapter.gives != null)
                 {
+
+
                     if (activeChapter.gives.knowledgeObject)
                     {
                         if (!knowledge.Contains(activeChapter.gives))
                         {
                             knowledge.Add(activeChapter.gives);
+                            print("ADDDDD");
+                            print(endGame);
+                            print(activeChapter.gives);
+                            if (knowledge.Contains(endGame))
+                            {
+                                CheckForEnd();
+                            }
+
+
                         }
                     }
                     if (activeChapter.gives.posessionObject)
