@@ -33,7 +33,6 @@ public class noteObject : GameManager
 
                 if (Mathf.Abs(transform.position.y) > 0.25) // mathf.Abs laver transform værdien om til et absolut tal. Så hvis værdien rammer -0.25, så bliver værdien lavet om til 0.25
                 {
-                    Debug.Log("hit");
                     GameManager.instance.normalHit();
                     Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);                  
                     Destroy(gameObject);
@@ -42,14 +41,12 @@ public class noteObject : GameManager
                 }
                 else if(Mathf.Abs(transform.position.y) > 0.05f)
                 {
-                    Debug.Log("Goodhit");
                     GameManager.instance.normalGoodHit();
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);                    
                     Destroy(gameObject);
                 }
                 else
                 {
-                    Debug.Log("perfecthit");
                     GameManager.instance.normalPerfectHit();
                     Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);                    
                     Destroy(gameObject);

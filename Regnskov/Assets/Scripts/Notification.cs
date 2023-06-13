@@ -44,7 +44,7 @@ public class Notification : MonoBehaviour
 
         if (timer <= 0 && gameObject.activeSelf) {
 
-            canvas.enabled = false;
+            gameObject.SetActive(false);
 
         
         
@@ -61,7 +61,7 @@ public class Notification : MonoBehaviour
     {
         timer = timerDuration;
 
-        canvas.enabled = true;
+        gameObject.SetActive(true);
         print("hello");
 
 

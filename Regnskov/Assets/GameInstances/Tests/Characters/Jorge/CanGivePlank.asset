@@ -18,4 +18,4 @@ MonoBehaviour:
   knowledgeObject: 1
   posessionObject: 0
   preRequisites: []
-  unique: 0
+  unique: 1

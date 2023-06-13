@@ -16,6 +16,6 @@ MonoBehaviour:
   instanceSprite: {fileID: 0}
   gameContent: {fileID: 0}
   knowledgeObject: 1
-  posessionObject: 1
+  posessionObject: 0
   preRequisites: []
   unique: 0

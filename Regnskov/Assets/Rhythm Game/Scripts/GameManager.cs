@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
+
     public CustomGameManager gameManager;
 
     [Header("SceneLoading")]
@@ -171,7 +172,6 @@ public class GameManager : MonoBehaviour
 
     public void noteHit()
     {
-        Debug.Log("hit on time");
 
         if(currentMultiplier - 1 < multiplierThresholds.Length) { // dette if statement gør at vi ikke overstiger Threshold værdierne, så vi ikke får nogle array index errors
 
@@ -217,7 +217,6 @@ public class GameManager : MonoBehaviour
 
     public void noteMissed()
     {
-        Debug.Log("missed note");
 
         currentMultiplier = 1;
         multiplierTracker = 0;

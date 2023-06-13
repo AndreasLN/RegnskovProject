@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CustomGameManager : MonoBehaviour
 {
     public static CustomGameManager instance;
+
+    public GameInstance atBigTree;
+
+    public Texture2D cursor;
+
+    public Texture2D canTalk;
+
+    public Texture2D canTalkHightlight;
+
 
     public int karma = 0;
 
@@ -24,9 +34,9 @@ public class CustomGameManager : MonoBehaviour
     public Image fade;
     float timer = 20.0f;
 
-    float jorgeMaxTimer = 25f;
+    float jorgeMaxTimer = 60f;
 
-    float jorgeTimer;
+    public float jorgeTimer = 60f;
 
     public bool paused;
     
@@ -34,6 +44,8 @@ public class CustomGameManager : MonoBehaviour
     {
         instance = this;
         
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
+
     }
 
     public void UpdateHunger()
@@ -56,26 +68,37 @@ public class CustomGameManager : MonoBehaviour
             UpdateHunger();
         }
 
-        if(JorgeTurnOn.Instance != null)
+        if(PlayerMovement.instance.knowledge.Contains(atBigTree))
         {
-            if (JorgeTurnOn.Instance.active)
+            jorgeTimer -= Time.deltaTime;
+
+
+            if (JorgeTurnOn.Instance != null)
             {
-                jorgeTimer -= Time.deltaTime;
 
-                if (timer < 0)
+
+                if (JorgeTurnOn.Instance.active)
                 {
-                    if (!PlayerMovement.instance.knowledge.Contains(JorgeTurnOn.Instance.canGivePlank))
+
+
+                    if (jorgeTimer < 0)
                     {
-                        jorgeTimer = jorgeMaxTimer;
 
 
-                        PlayerMovement.instance.knowledge.Add(JorgeTurnOn.Instance.canGivePlank);
+                        if (!PlayerMovement.instance.knowledge.Contains(JorgeTurnOn.Instance.canGivePlank))
+                        {
+                            jorgeTimer = jorgeMaxTimer;
+
+
+                            PlayerMovement.instance.knowledge.Add(JorgeTurnOn.Instance.canGivePlank);
+
+                        }
+
 
                     }
-
-
                 }
             }
+           
         }
 
         
