@@ -7,7 +7,7 @@ public class UnbuiltHouse : MonoBehaviour
 
     public GameInstance gameInstance;
 
-    bool notified = false;
+    public GameInstance notified;
 
     public Notification notification;
 
@@ -18,9 +18,10 @@ public class UnbuiltHouse : MonoBehaviour
         {
             gameObject.SetActive(true);
 
-            if (!notified)
+            if (!PlayerMovement.instance.knowledge.Contains(notified))
             {
-                notified= true;
+                PlayerMovement.instance.knowledge.Add(notified);
+
 
 
                 //Notification.instance.canvas.enabled= true;
