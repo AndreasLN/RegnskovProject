@@ -60,7 +60,7 @@ public class CustomGameManager : MonoBehaviour
         {
             if (JorgeTurnOn.Instance.active)
             {
-                timer -= Time.deltaTime;
+                jorgeTimer -= Time.deltaTime;
 
                 if (timer < 0)
                 {

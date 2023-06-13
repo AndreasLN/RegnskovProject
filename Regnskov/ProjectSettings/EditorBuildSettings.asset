@@ -78,6 +78,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EndScenes/EndScene 8.unity
     guid: 0804f7d834db69747824b5e36af7c794
   - enabled: 1
+    path: Assets/Scenes/EndScenes/EndScene 9.unity
+    guid: 826b89fabbfa9f24db59456474784ab7
+  - enabled: 1
     path: Assets/Scenes/EndScenes/EndScene 0.unity
     guid: 9053ea856fe3442429f0e0e595f12059
   m_configObjects: {}
