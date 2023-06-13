@@ -2294,6 +2294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333a33a2272c9654f8259d2d3de8af90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGame: {fileID: 11400000, guid: c3922468079919947bbcfb8c320dcd8b, type: 2}
   preInstance: {fileID: 0}
   window: {fileID: 2298882796183021648}
   indicator: {fileID: 2298882796170062915}
@@ -3072,7 +3073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65, y: -145}
+  m_AnchoredPosition: {x: -64.99997, y: -145}
   m_SizeDelta: {x: -200, y: -310}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7663224436642222628
