@@ -23,7 +23,8 @@ MonoBehaviour:
     face: {fileID: 0}
   requiresKnowledge: {fileID: 0}
   requiresPosession: {fileID: 0}
-  gives: {fileID: 11400000, guid: 877d7d740e6498f4fac2d71381f846e3, type: 2}
+  gives: {fileID: 0}
+  takes: {fileID: 0}
   avoid: {fileID: 0}
-  priority: 1
+  priority: 0
   replies: []
