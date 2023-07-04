@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
 
         rigidbody2d = GetComponent<Rigidbody2D>();
-        gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
+        gameManager = CustomGameManager.instance;
 
     }
 
@@ -92,29 +92,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        animator.SetFloat("Horizontal", horizontal);
+        animator.SetFloat("Vertical", vertical);
 
         if (!stopMovement)
         {
-
-            animator.SetFloat("Horizontal", horizontal);
-            animator.SetFloat("Vertical", vertical);
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
+           
         }
 
 
         if(stopMovement)
         {
+            horizontal = 0;
+            vertical = 0;
             speed = 0.0f;
         }
-        else{
+        else
+        {
 
             SetSpeed();
 
         }
 
-
-        
 
 
     }

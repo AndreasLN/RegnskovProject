@@ -25,7 +25,7 @@ public class DialogueController : MonoBehaviour
     public TMP_Text dialogueText;
     //Dialogues list
     public Canvas canvas;
-    public SpriteRenderer portrait;
+    public Image portrait;
 
     [System.Serializable]
     public class Buttons
@@ -35,6 +35,7 @@ public class DialogueController : MonoBehaviour
 
     public Buttons buttons;
 
+    DialogueTrigger trigger;
 
     //Writing speed
     public float writingSpeed;
@@ -89,8 +90,20 @@ public class DialogueController : MonoBehaviour
     {
         indicator.SetActive(show);
     }
-    public void SetCollection(DialogueCollection collection, List<GameInstance> knowledge, List<GameInstance> posession)
+    public void SetCollection(DialogueCollection collection, List<GameInstance> knowledge, List<GameInstance> posession, DialogueTrigger dialogueTrigger = null)
     {
+
+        if(dialogueTrigger!= null)
+        {
+
+            trigger = dialogueTrigger;
+
+            trigger.closeDialogueTrigger.mousePointed = false;
+
+            Cursor.SetCursor(trigger.mouseCursor, Vector2.zero, CursorMode.ForceSoftware);
+
+            trigger.closeDialogueTrigger.gameObject.SetActive(false);
+        }
 
         PlayerMovement.instance.stopMovement = true;
         awaitReply = false;
@@ -107,11 +120,19 @@ public class DialogueController : MonoBehaviour
     {
         PlayerMovement.instance.stopMovement = false;
 
+        if(trigger !=null)
+        {
+            trigger.closeDialogueTrigger.gameObject.SetActive(true);
+
+        }
+
+
         started = false;
         waitForNext = false;
         awaitReply = false;
         ToggleWindow(false);
 
+        
        
 
     }
@@ -258,9 +279,7 @@ public class DialogueController : MonoBehaviour
                         if (!knowledge.Contains(activeChapter.gives))
                         {
                             knowledge.Add(activeChapter.gives);
-                            print("ADDDDD");
-                            print(endGame);
-                            print(activeChapter.gives);
+
                             if (knowledge.Contains(endGame))
                             {
                                 CheckForEnd();
@@ -282,14 +301,15 @@ public class DialogueController : MonoBehaviour
                 {
                     if (activeChapter.takes.knowledgeObject)
                     {
-                        if (!knowledge.Contains(activeChapter.takes))
+                        if (knowledge.Contains(activeChapter.takes))
                         {
+                            print("HELLO???");
                             knowledge.Remove(activeChapter.takes);
                         }
                     }
                     if (activeChapter.takes.posessionObject)
                     {
-                        if (!posession.Contains(activeChapter.takes) || !activeChapter.takes.unique)
+                        if (posession.Contains(activeChapter.takes) || !activeChapter.takes.unique)
                         {
                             posession.Remove(activeChapter.takes);
                         }

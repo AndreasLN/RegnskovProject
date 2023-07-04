@@ -17,6 +17,13 @@ public class End : MonoBehaviour
         instance = this;
     }
 
+    public void MouseRefresh()
+    {
+
+        Cursor.SetCursor(CustomGameManager.instance.cursor, Vector2.zero, CursorMode.ForceSoftware);
+     
+
+    }
 
 
 

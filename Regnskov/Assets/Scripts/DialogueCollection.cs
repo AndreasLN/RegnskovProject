@@ -69,6 +69,64 @@ public class DialogueCollection : MonoBehaviour
         return null;
     }
 
+    public List<DialogueChapter> AllChapters(List<GameInstance> knowledge, List<GameInstance> posession, bool savePreResult = true)
+    {
+
+
+        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
+
+
+        return result;
+
+    }
+
+    public DialogueChapter CheckNextChapter(List<GameInstance> knowledge, List<GameInstance> posession, bool savePreResult = true)
+    {
+
+        print(knowledge);
+        print(posession);
+        print(savePreResult);
+        print(chapters);
+
+        // c = current chapter in Iteration
+        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
+
+        result.Sort((x, y) => x.priority.CompareTo(y.priority));
+
+        if (result.Count > 0)
+        {
+            if (randomizeOrder && result[result.Count - 1].priority == false)
+            {
+                int rdm = Random.Range(0, result.Count - 1);
+                if (savePreResult)
+                {
+                    preResult = result[rdm];
+                }
+
+
+                return result[rdm];
+
+
+            }
+            else
+            {
+                if (savePreResult) 
+                { 
+
+                    preResult = result[result.Count - 1];
+                }
+
+                return result[result.Count - 1];
+
+            }
+
+
+
+        }
+
+        return null;
+    }
+
 
 
 }

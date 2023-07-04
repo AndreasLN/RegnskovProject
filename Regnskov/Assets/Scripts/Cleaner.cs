@@ -14,24 +14,22 @@ public class Cleaner : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        player = FindAnyObjectByType<PlayerMovement>();
 
-        gameManager = FindAnyObjectByType<CustomGameManager>();
+        PlayerMovement.instance.gameObject.SetActive(false);
 
-        player.gameObject.SetActive(false);
 
-        gameManager.hungerCanvas.gameObject.SetActive(false);
+        CustomGameManager.instance.hungerCanvas.gameObject.SetActive(false);
 
 
         if (shouldPause)
         {
-            gameManager.paused = true;
+            CustomGameManager.instance.paused = true;
         }
         else
         {
-            gameManager.paused = false;
+            CustomGameManager.instance.paused = false;
         }
 
 

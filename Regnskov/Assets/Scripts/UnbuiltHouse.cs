@@ -21,12 +21,12 @@ public class UnbuiltHouse : MonoBehaviour
             if (!PlayerMovement.instance.knowledge.Contains(notified))
             {
                 PlayerMovement.instance.knowledge.Add(notified);
+                print("jfljsdjfldsjlfkjdslkfjsdklfjdsjfkdsjfklsdjf");
 
 
+                notification.gameObject.SetActive(true);
 
-                //Notification.instance.canvas.enabled= true;
-
-                Notification.instance.NotificationTimer();
+                notification.NotificationTimer();
 
 
             }

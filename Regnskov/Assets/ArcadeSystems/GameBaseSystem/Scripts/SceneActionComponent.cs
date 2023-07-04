@@ -35,7 +35,7 @@ namespace GameBaseSystem
 
         void Start()
         {
-            CustomGameManager gameManager = Resources.FindObjectsOfTypeAll<CustomGameManager>()[0];
+            CustomGameManager gameManager = CustomGameManager.instance;
 
             Image fade = gameManager.fade;
 
