@@ -34,7 +34,7 @@ public class DialogueController : MonoBehaviour
     }
 
     public Buttons buttons;
-
+    public Dialogue dialogue;
     DialogueTrigger trigger;
 
     //Writing speed
@@ -61,7 +61,7 @@ public class DialogueController : MonoBehaviour
         ToggleIndicator(false);
         ToggleWindow(false);
 
-        if(DialogueController.instance != null )
+        if(DialogueController.instance != null && instance.gameObject.scene.buildIndex != 0)
         {
 
             preInstance = DialogueController.instance;
@@ -75,6 +75,23 @@ public class DialogueController : MonoBehaviour
 
         //SetCurrentDialogue(testStartDialogue);
 
+    }
+
+    private void OnDestroy()
+    {
+        if (instance != null && instance.gameObject.scene.buildIndex != 0)
+        {
+            if (preInstance != null)
+            {
+                instance = preInstance;
+                Debug.Log("Insttance reset to Game version");
+            }
+            else
+            {
+                Debug.Log("Trying to reset to Game instance, but no preInstance avail.");
+            }
+            
+        }
     }
 
     public void SetInstance()
@@ -186,8 +203,11 @@ public class DialogueController : MonoBehaviour
         activeChunk = activeChapter.GetNext(activeChunk);
         if (activeChunk != null)
         {
-
-            portrait.sprite = activeChunk.face;
+            if (portrait != null)
+            {
+                portrait.sprite = activeChunk.face;
+            }
+                
             dialogueText.text = "";
             charIndex = 0;
             StartCoroutine(Writing());

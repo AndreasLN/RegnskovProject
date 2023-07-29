@@ -813,12 +813,13 @@ MonoBehaviour:
   indicator: {fileID: 375998734}
   dialogueText: {fileID: 1892848054}
   canvas: {fileID: 2069209474}
-  portrait: {fileID: 1862740562}
+  portrait: {fileID: 0}
   buttons:
     buttons:
     - {fileID: 461871690}
     - {fileID: 248819211}
     - {fileID: 1378466938}
+  dialogue: {fileID: 853289333}
   writingSpeed: 0.01
 --- !u!114 &853289333
 MonoBehaviour:

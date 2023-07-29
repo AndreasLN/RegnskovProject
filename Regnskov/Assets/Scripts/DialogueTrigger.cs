@@ -28,7 +28,7 @@ public class DialogueTrigger : MonoBehaviour
     Texture2D canTalkHightlight;
 
 
-    private void Awake()
+    private void Start()
     {
 
         mouseCursor = CustomGameManager.instance.cursor;
@@ -40,8 +40,9 @@ public class DialogueTrigger : MonoBehaviour
         canTalkHightlight = CustomGameManager.instance.canTalkHightlight;
 
         closeDialogueTrigger = closeTrigger.GetComponent<CloseDialogueTrigger>();
+        //Debug.LogError("Count: " + Resources.FindObjectsOfTypeAll<Dialogue>().Length);
+        dialogueScript = DialogueController.instance.dialogue;
 
-        dialogueScript = Resources.FindObjectsOfTypeAll<Dialogue>()[0];
 
     }
 
@@ -102,13 +103,21 @@ public class DialogueTrigger : MonoBehaviour
     //While detected if we interact start the dialogue
     private void Update()
     {
+        if (closeDialogueTrigger == null)
+        {
+            Debug.LogError("closeDialogueTrigger gone!!!");
+            
 
+        }
+        if (DialogueController.instance == null)
+        {
+            Debug.LogError("DialogueController is GONE!!!");
 
+        }
         if (closeDialogueTrigger.mousePointed && !DialogueController.instance.window.gameObject.activeSelf)
         {
 
-
-
+            
 
             if (playerDetected)
             {

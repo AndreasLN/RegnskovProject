@@ -38,7 +38,7 @@ public class DialogueCollection : MonoBehaviour
 
 
         // c = current chapter in Iteration
-        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
+        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || (c.gives != null && !c.gives.unique)) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
 
         result.Sort((x, y) => x.priority.CompareTo(y.priority));
 
@@ -73,7 +73,7 @@ public class DialogueCollection : MonoBehaviour
     {
 
 
-        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
+        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || (c.gives != null && !c.gives.unique)) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
 
 
         return result;
@@ -89,7 +89,7 @@ public class DialogueCollection : MonoBehaviour
         print(chapters);
 
         // c = current chapter in Iteration
-        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || !c.gives.unique) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
+        List<DialogueChapter> result = chapters.FindAll(c => (c.requiresKnowledge == null || knowledge.Contains(c.requiresKnowledge)) && (c.requiresPosession == null || posession.Contains(c.requiresPosession)) && (!knowledge.Contains(c.gives) || (c.gives != null && !c.gives.unique)) && (c.avoid == null || !knowledge.Contains(c.avoid)) && c != preResult);
 
         result.Sort((x, y) => x.priority.CompareTo(y.priority));
 
